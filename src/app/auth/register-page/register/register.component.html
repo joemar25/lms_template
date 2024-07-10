@@ -1,0 +1,134 @@
+<h1>Main Layout</h1>
+<app-form></app-form>
+<!-- Main Wrapper -->
+<div>
+  <div>
+    <!-- Login Banner -->
+    <!-- <div>
+        <owl-carousel-o [options]="registerOwlOptions">
+          @for (slide of register; track slide) {
+          <ng-template carouselSlide>
+            <div>
+              <img [src]="slide.img" alt="Logo" />
+              <h2>{{ slide.content1 }}<br />{{ slide.content2 }}</h2>
+              <p>{{ slide.paragraph }}</p>
+            </div>
+          </ng-template>
+          }
+          @empty {
+          <p>No slides available.</p>
+          }
+        </owl-carousel-o>
+      </div> -->
+    <!-- /Login Banner -->
+
+    <div>
+      <!-- Login -->
+      <div>
+        <div>
+          <!-- <img src="assets/img/logo.svg" alt="Logo" /> -->
+          <div>
+            <a [routerLink]="routes.home">Back to Home</a>
+          </div>
+        </div>
+        <h1>Sign up</h1>
+        <div>
+          <label for="full-name">Full Name</label>
+          <input type="text" placeholder="Enter your Full Name" />
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" placeholder="Enter your email address" />
+        </div>
+        <div>
+          <label for="password">Password</label>
+          <div>
+            <input
+              [type]="password"
+              placeholder="Enter your password"
+              [(ngModel)]="registerFormCustom.password"
+              (input)="onChangePassword(registerFormCustom.password)"
+              (input)="onInputChange()"
+            />
+            <span
+              >@if (show) {
+              <i (click)="onClick()" (keydown)="onClick()" tabindex="1">Show</i>
+              }</span
+            >
+            <span
+              >@if (!show) {
+              <i (click)="onClick()" (keydown)="onClick()" tabindex="1">Hide</i>
+              }</span
+            >
+          </div>
+          <div
+            [ngClass]="{
+              'poor-active': passwordResponse.passwordResponseKey === '0',
+              'avg-active': passwordResponse.passwordResponseKey === '1',
+              'strong-active': passwordResponse.passwordResponseKey === '2',
+              'heavy-active': passwordResponse.passwordResponseKey === '3'
+            }"
+          >
+            <span class="active"></span>
+            <span class="active"></span>
+            <span class="active"></span>
+            <span class="active"></span>
+          </div>
+          <div
+            [ngClass]="{
+              weak: passwordResponse.passwordResponseKey === '0',
+              average: passwordResponse.passwordResponseKey === '1',
+              good: passwordResponse.passwordResponseKey === '2',
+              great: passwordResponse.passwordResponseKey === '3'
+            }"
+          >
+            @if (typingStarted && passwordResponse.passwordResponseKey === '0')
+            {
+            <img [src]="passwordResponse.passwordResponseImage" alt="img" />
+            }
+            {{ passwordResponse.passwordResponseText }}
+          </div>
+        </div>
+
+        <div>
+          <label>
+            <input type="checkbox" />
+            I agree to the
+            <a [routerLink]="routes.page_term_condition">Terms of Service</a>
+            and
+            <a [routerLink]="routes.page_privacy_policy">Privacy Policy.</a>
+          </label>
+        </div>
+        <div>
+          <button type="submit" [routerLink]="routes.login">
+            Create Account
+          </button>
+        </div>
+      </div>
+      <div>
+        <span>Or sign in with</span>
+        <div>
+          <ul>
+            <li>
+              <a href="javascript:void(0)"
+                ><img src="assets/img/net-icon-01.png" alt="Logo" /> Sign In
+                using Google</a
+              >
+            </li>
+            <li>
+              <a href="javascript:void(0)"
+                ><img src="assets/img/net-icon-02.png" alt="Logo" />Sign In
+                using Facebook</a
+              >
+            </li>
+          </ul>
+        </div>
+        <p>
+          Already have an account? <a [routerLink]="routes.login">Sign in</a>
+        </p>
+      </div>
+      <!-- /Login -->
+    </div>
+  </div>
+</div>
+<!-- /Main Wrapper -->

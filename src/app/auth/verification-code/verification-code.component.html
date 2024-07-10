@@ -1,0 +1,55 @@
+<!-- Login Banner -->
+<div>
+  <owl-carousel-o [options]="verificationCodeOwlOptions">
+    @for (slide of verificationCode; track slide) {
+    <ng-template carouselSlide>
+      <div>
+        <img [src]="slide.img" alt="Logo">
+        <h2>{{ slide.content1 }}<br>{{ slide.content2 }}</h2>
+        <p>{{ slide.paragraph }}</p>
+      </div>
+    </ng-template>
+    }
+    @empty {
+    <p>No slides available.</p>
+    }
+  </owl-carousel-o>
+</div>
+<!-- /Login Banner -->
+
+<div>
+  <!-- Login -->
+  <div>
+    <div>
+      <img src="assets/img/logo.svg" alt="Logo">
+      <div>
+        <a [routerLink]="routes.home">Back to Home</a>
+      </div>
+    </div>
+    <h1>Enter Verification Code</h1>
+    <p>We have just sent a verification code to your registered email ID</p>
+    <div>
+      <div>
+        <input [(ngModel)]="oneTimePassword.data1" maxlength="1"
+          (keydown.backspace)="triggerBackspace(oneTimePassword.data1, 'digit-1')"
+          (input)="ValueChanged(oneTimePassword.data1, 'digit-1')" type="text" id="digit-1">
+        <input [(ngModel)]="oneTimePassword.data2" maxlength="1"
+          (keydown.backspace)="triggerBackspace(oneTimePassword.data2, 'digit-2')"
+          (input)="ValueChanged(oneTimePassword.data2, 'digit-2')" type="text" id="digit-2">
+        <input [(ngModel)]="oneTimePassword.data3" maxlength="1"
+          (keydown.backspace)="triggerBackspace(oneTimePassword.data3, 'digit-3')"
+          (input)="ValueChanged(oneTimePassword.data3, 'digit-3')" type="text" id="digit-3">
+        <input [(ngModel)]="oneTimePassword.data4" maxlength="1"
+          (keydown.backspace)="triggerBackspace(oneTimePassword.data4, 'digit-4')"
+          (input)="ValueChanged(oneTimePassword.data4, 'digit-4')" type="text" id="digit-4">
+      </div>
+      <div>
+        <a [routerLink]="routes.page_verification_code">Send the code again</a>
+      </div>
+      <div>
+        <button type="submit" (click)="directLogin()">Submit</button>
+      </div>
+    </div>
+  </div>
+  <!-- /Login -->
+</div>

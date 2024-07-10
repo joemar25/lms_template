@@ -1,0 +1,105 @@
+<!-- src/app/auth/login/login.component.html -->
+<!-- Main Wrapper -->
+<!-- <div> -->
+<!-- Login Banner -->
+<!-- <owl-carousel-o [options]="welcomeLoginOwlOptions">
+    <ng-template carouselSlide *ngFor="let slide of welcomeLogin">
+      <img [src]="slide.img" alt="Logo">
+      <h2>{{slide.content1}}<br>{{slide.content2}}</h2>
+      <p>{{slide.paragraph}}</p>
+    </ng-template>
+  </owl-carousel-o> -->
+<!-- /Login Banner -->
+
+<!-- Login src/app/auth/login -->
+<!-- <img src="assets/img/logo.svg" alt="Logo"> -->
+<div class="bg-gray-100">
+  <a [routerLink]="routes.home" class="text-indigo-600 hover:text-indigo-800 transition duration-150 ease-in-out">
+    &larr; Back to Home
+  </a>
+</div>
+<div class="min-h-screen flex items-center justify-center bg-gray-100 py-4 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-md w-full space-y-8 bg-white p-8 rounded-lg shadow-md">
+    <div class="flex justify-between items-center">
+      <h1 class="text-3xl font-bold text-gray-900">Sign into Your Account</h1>
+    </div>
+
+    <form (ngSubmit)="login()" class="mt-8 space-y-6">
+      <div class="rounded-md shadow-sm -space-y-px">
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+          <input id="email" type="email" placeholder="Enter your email address" [(ngModel)]="email" name="email"
+            required
+            class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" />
+        </div>
+        <div class="relative">
+          <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+          <input id="password" [type]="passwordInput" placeholder="Enter your password" [(ngModel)]="password"
+            name="password" required
+            class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" />
+          <i (click)="togglePasswordVisibility()" tabindex="1" (keydown.enter)="togglePasswordVisibility()"
+            (keydown.space)="togglePasswordVisibility()"
+            class="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5 cursor-pointer">
+            {{ show ? "Show" : "Hide" }}
+          </i>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between">
+        <div class="flex items-center">
+          <input id="remember_me" type="checkbox"
+            class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded" />
+          <label for="remember_me" class="ml-2 block text-sm text-gray-900">Remember me</label>
+        </div>
+        <a [routerLink]="routes.forgot_password" class="text-sm text-indigo-600 hover:text-indigo-800">Forgot
+          Password?</a>
+      </div>
+
+      <button type="submit"
+        class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+        Sign In
+      </button>
+    </form>
+
+    <div class="mt-6">
+      <div class="relative">
+        <div class="absolute inset-0 flex items-center">
+          <div class="w-full border-t border-gray-300"></div>
+        </div>
+        <div class="relative flex justify-center text-sm">
+          <span class="px-2 bg-white text-gray-500">Or guest sign in as</span>
+        </div>
+      </div>
+
+      <div class="mt-6 grid grid-cols-2 gap-3">
+        <button (click)="loginAsGuest('super_admin')" (keyup.enter)="loginAsGuest('super_admin')" tabindex="0"
+        class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+        <span>Super Admin</span>
+      </button>
+        <button (click)="loginAsGuest('school_admin')" (keyup.enter)="loginAsGuest('school_admin')" tabindex="0"
+          class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+          <span>School Admin</span>
+        </button>
+        <button (click)="loginAsGuest('department_admin')" (keyup.enter)="loginAsGuest('department_admin')" tabindex="0"
+          class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+          <span>Department Admin</span>
+        </button>
+        <button (click)="loginAsGuest('instructor')" (keyup.enter)="loginAsGuest('instructor')" tabindex="0"
+          class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+          <span>Instructor</span>
+        </button>
+        <button (click)="loginAsGuest('student')" (keyup.enter)="loginAsGuest('student')" tabindex="0"
+          class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+          <span>Student</span>
+        </button>
+      </div>
+    </div>
+
+    <p class="mt-2 text-center text-sm text-gray-600">
+      New User?
+      <a [routerLink]="routes.register" class="font-medium text-indigo-600 hover:text-indigo-500">
+        Create an Account
+      </a>
+    </p>
+  </div>
+</div>

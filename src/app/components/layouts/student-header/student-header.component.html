@@ -1,0 +1,120 @@
+<!-- Header -->
+<header class="header header-page">
+  <div class="header-fixed">
+    <nav class="navbar navbar-expand-lg header-nav scroll-sticky">
+      <div class="container">
+        <div class="navbar-header">
+          <a (click)="toggleSidebar()" id="mobile_btn" href="javascript:void(0)">
+            <span class="bar-icon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </a>
+          <a [routerLink]="routes.home" class="navbar-brand logo">
+            <img src="assets/img/logo.svg" class="img-fluid" alt="Logo" />
+          </a>
+        </div>
+        <div class="main-menu-wrapper">
+          <div class="menu-header">
+            <a [routerLink]="routes.home" class="menu-logo">
+              <img src="assets/img/logo.svg" class="img-fluid" alt="Logo" />
+            </a>
+            <a (click)="hideSidebar()" class="menu-close" href="javascript:void(0)">
+              <i class="fas fa-times"></i>
+            </a>
+          </div>
+          <ul class="main-nav">
+            @for (mainMenus of sidebar; track mainMenus) {
+            @if (mainMenus.separateRoute === true) {
+            <li [class.active]="base === mainMenus.base">
+              <a [routerLink]="mainMenus.route">{{ mainMenus.tittle }}</a>
+            </li>
+            }
+            @if (mainMenus.separateRoute === false) {
+            <li class="has-submenu" [class.active]="base === mainMenus.base">
+              <a href="javascript:void(0)" (click)="mainMenus.showAsTab = !mainMenus.showAsTab">{{ mainMenus.tittle }}
+                <i class="fas fa-chevron-down"></i></a>
+              <ul class="submenu" [ngClass]="{
+                      'show-sub-menu': mainMenus.showAsTab === true
+                    }">
+                @for (menu of mainMenus.menu; track menu) {
+                @if (menu.hasSubRoute === false) {
+                <li [class.active]="
+                            base === menu.base && page === menu.page
+                          ">
+                  <a [routerLink]="menu.route">{{ menu.menuValue }}</a>
+                </li>
+                }
+                @if (menu.hasSubRoute === true) {
+                <li class="has-submenu" [class.active]="page === menu.page">
+                  <a (click)="menu.showSubRoute = !menu.showSubRoute" [routerLink]="menu.route">{{ menu.menuValue }}</a>
+                  <ul class="submenu" [ngClass]="{
+                              'show-sub-menu': menu.showSubRoute === true
+                            }">
+                    @for (subMenu of menu.subMenus; track subMenu) {
+                    <li [class.active]="
+                                  base === subMenu.base &&
+                                  page === subMenu.page &&
+                                  last === subMenu.last
+                                ">
+                      <a [routerLink]="subMenu.route">{{
+                        subMenu.menuValue
+                        }}</a>
+                    </li>
+                    }
+                  </ul>
+                </li>
+                }
+                }
+              </ul>
+            </li>
+            }
+            }
+            <li class="login-link">
+              <a [routerLink]="routes.login">Login / Signup</a>
+            </li>
+          </ul>
+        </div>
+        <ul class="nav header-navbar-rht">
+          <li class="nav-item user-nav">
+            <a href="javascript:void(0)" class="dropdown-toggle" data-bs-toggle="dropdown">
+              <span class="user-img">
+                <img src="assets/img/user/user16.jpg" alt="" />
+                <span class="status online"></span>
+              </span>
+            </a>
+            <div class="users dropdown-menu dropdown-menu-right" data-popper-placement="bottom-end">
+              <div class="user-header">
+                <div class="avatar avatar-sm">
+                  <img src="assets/img/user/user16.jpg" alt="User Image" class="avatar-img rounded-circle" />
+                </div>
+                <div class="user-text">
+                  <h6>Rolands R</h6>
+                  <p class="text-muted mb-0">Student</p>
+                </div>
+              </div>
+              <a class="dropdown-item" [routerLink]="routes.instructor_dashboard"><i class="feather icon-home me-1"></i>
+                Dashboard</a>
+
+              <a class="dropdown-item" [routerLink]="routes.studentSettings"><i
+                  class="feather icon-user me-1"></i> Profile</a>
+              <a class="dropdown-item" [routerLink]="routes.students_subscription"><i
+                  class="feather icon-star me-1"></i>
+                Subscription</a>
+              <div class="dropdown-item night-mode">
+                <span><i class="feather icon-moon me-1"></i> Night Mode
+                </span>
+                <div class="form-check form-switch check-on m-0">
+                  <input class="form-check-input" type="checkbox" id="night-mode" />
+                </div>
+              </div>
+              <a class="dropdown-item" [routerLink]="routes.home"><i class="feather icon-log-out me-1"></i> Logout</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+<!-- /Header -->

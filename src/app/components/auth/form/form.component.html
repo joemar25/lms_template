@@ -1,0 +1,31 @@
+<mat-horizontal-stepper [selectedIndex]="step">
+  <mat-step label="Step 1: Personal Details">
+    <app-form-section
+      sectionTitle="Personal Details"
+      [fields]="formData.personalDetails"
+    >
+    </app-form-section>
+    <div>
+      <button mat-button matStepperNext (click)="nextStep()">Next</button>
+    </div>
+  </mat-step>
+  <mat-step label="Step 2: Address Details">
+    <app-form-section
+      sectionTitle="Address Details"
+      [fields]="formData.addressDetails"
+    >
+    </app-form-section>
+    <div>
+      <button mat-button matStepperPrevious (click)="prevStep()">Back</button>
+      <button mat-button matStepperNext (click)="nextStep()">Next</button>
+    </div>
+  </mat-step>
+  <mat-step label="Step 3: Review & Submit">
+    <h3>Review your details and submit the form</h3>
+    <!-- Add a summary view here if needed -->
+    <div>
+      <button mat-button matStepperPrevious (click)="prevStep()">Back</button>
+      <button mat-button (click)="submitForm()">Submit</button>
+    </div>
+  </mat-step>
+</mat-horizontal-stepper>

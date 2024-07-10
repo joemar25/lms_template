@@ -1,0 +1,56 @@
+{
+  "data": [
+    {
+      "img1": "assets/img/course/course-10.jpg",
+      "img2": "assets/img/icon/icon-01.svg",
+      "img3": "assets/img/icon/timer-start.svg",
+      "content": "Information About UI/UX Design Degree",
+      "students": "3200",
+      "status": "Live",
+      "lesson": "10+ Lesson",
+      "time": "7hr 20min"
+    },
+    {
+      "img1": "assets/img/course/course-11.jpg",
+      "img2": "assets/img/icon/icon-01.svg",
+      "img3": "assets/img/icon/timer-start.svg",
+      "progress": "progress stip",
+      "content": "Wordpress for Beginners - Master Wordpress Quickly",
+      "students": "0",
+      "status": "Draft",
+      "lesson": "10+ Lesson",
+      "time": "7hr 20min"
+    },
+    {
+      "img1": "assets/img/course/course-12.jpg",
+      "img2": "assets/img/icon/icon-01.svg",
+      "img3": "assets/img/icon/timer-start.svg",
+      "content": "Sketch from A to Z (2022): Become an app designer",
+      "students": "1500",
+      "status": "Live",
+      "lesson": "10+ Lesson",
+      "time": "7hr 20min"
+    },
+    {
+      "img1": "assets/img/course/course-13.jpg",
+      "img2": "assets/img/icon/icon-01.svg",
+      "img3": "assets/img/icon/timer-start.svg",
+      "content": " C# Developers Double Your Coding Speed with Visual Studio",
+      "students": "0",
+      "status": "Pending",
+      "lesson": "10+ Lesson",
+      "time": "7hr 20min"
+    },
+    {
+      "img1": "assets/img/course/course-14.jpg",
+      "img2": "assets/img/icon/icon-01.svg",
+      "img3": "assets/img/icon/timer-start.svg",
+      "content": "Build Responsive Real World Websites with HTML5 and CSS3",
+      "students": "0",
+      "status": "Deleted",
+      "lesson": "10+ Lesson",
+      "time": "7hr 20min"
+    }
+  ],
+  "totalData": 5
+}

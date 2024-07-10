@@ -1,0 +1,141 @@
+<!-- 
+   <aside class="w-64 bg-white py-8">
+    <h1>
+      <a [routerLink]="routes.home" class="text-pink-300 text-3xl font-bold p-4"> bini babies! </a>
+    </h1>
+    <nav class="flex-1 overflow-y-auto">
+      <ul class="space-y-2 p-4" *ngIf="user">
+        <ng-container *ngIf="getUserType() === 'student'">
+          <li *ngFor="let item of student_no">
+            <ng-container *ngIf="item.subItems && item.subItems.length">
+              <div class="flex items-center justify-between p-2 text-gray-800 hover:bg-purple-300 hover:rounded-lg hover:text-white cursor-pointer" (click)="toggleDropdown(item.title)">
+                <span>{{ item.title }}</span>
+                <span [ngClass]="{ 'rotate-180': isOpen[item.title] }" class="transform transition-transform duration-300"><i class="fas fa-chevron-down"></i></span>
+              </div>
+              <ul *ngIf="isOpen[item.title]" class="space-y-2 ml-4">
+                <li *ngFor="let subItem of item.subItems">
+                  <a [routerLink]="subItem.route" class="block p-2 rounded text-gray-800 hover:bg-purple-300 hover:rounded-lg hover:text-white">{{ subItem.title }}</a>
+                </li>
+              </ul>
+            </ng-container>
+            <ng-container *ngIf="!item.subItems || !item.subItems.length">
+              <div class="flex items-center justify-between p-2 text-gray-800 hover:bg-purple-300 hover:rounded-lg hover:text-white cursor-pointer">
+                <a [routerLink]="item.route" class="w-full">{{ item.title }}</a>
+              </div>
+            </ng-container>
+          </li>
+        </ng-container>
+        <ng-container *ngIf="getUserType() === 'instructor'">
+          <li *ngFor="let item of instructor">
+            <div class="flex items-center justify-between p-2 text-gray-800 hover:bg-purple-300 hover:rounded-lg hover:text-white cursor-pointer">
+              <a [routerLink]="item.route" class="w-full">{{ item.title }}</a>
+            </div>
+          </li>
+        </ng-container>
+        <ng-container *ngIf="getUserType() === 'school_admin'">
+          <li *ngFor="let group of school_admin">
+            <div class="flex items-center justify-between p-2 text-gray-800 hover:bg-purple-300 hover:rounded-lg hover:text-white cursor-pointer" (click)="toggleDropdown(group.isOpenKey)">
+              <span>{{ group.title }}</span>
+              <span [ngClass]="{ 'rotate-180': isOpen[group.isOpenKey] }" class="transform transition-transform duration-300"><i class="fas fa-chevron-down"></i></span>
+            </div>
+            <ul *ngIf="isOpen[group.isOpenKey]" class="space-y-2 ml-4">
+              <li *ngFor="let subItem of group.subItems">
+                <a [routerLink]="subItem.route" class="block p-2 rounded text-gray-800 hover:bg-purple-300 hover:rounded-lg hover:text-white">{{ subItem.title }}</a>
+              </li>
+            </ul>
+          </li>
+        </ng-container>
+        <ng-container *ngIf="getUserType() === 'department_admin'">
+          <li *ngFor="let group of department_admin">
+            <div class="flex items-center justify-between p-2 text-gray-800 hover:bg-purple-300 hover:rounded-lg hover:text-white cursor-pointer" (click)="toggleDropdown(group.isOpenKey)">
+              <span>{{ group.title }}</span>
+              <span [ngClass]="{ 'rotate-180': isOpen[group.isOpenKey] }" class="transform transition-transform duration-300"><i class="fas fa-chevron-down"></i></span>
+            </div>
+            <ul *ngIf="isOpen[group.isOpenKey]" class="space-y-2 ml-4">
+              <li *ngFor="let subItem of group.subItems">
+                <a [routerLink]="subItem.route" class="block p-2 rounded text-gray-800 hover:bg-purple-300 hover:rounded-lg hover:text-white">{{ subItem.title }}</a>
+              </li>
+            </ul>
+          </li>
+        </ng-container>
+        <li>
+          <div
+            class="flex items-center justify-between p-2 text-gray-800 hover:bg-purple-300 hover:rounded-lg hover:text-white cursor-pointer"
+            tabindex="0" (click)="logout()" (keyup.enter)="logout()">
+            <span>Logout</span>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+   -->
+
+   <aside class="w-64 bg-white py-8">
+    <h1>
+      <a [routerLink]="routes.home" class="text-pink-300 text-3xl font-bold p-4"> bini babies! </a>
+    </h1>
+    <nav class="flex-1 overflow-y-auto">
+      <ul class="space-y-2 p-4" *ngIf="user">
+        <ng-container *ngIf="getUserType() === 'student'">
+          <li *ngFor="let item of student_no">
+            <ng-container *ngIf="item.subItems && item.subItems.length">
+              <div class="flex items-center justify-between p-2 text-gray-800 hover:bg-purple-300 hover:rounded-lg hover:text-white cursor-pointer" (click)="toggleDropdown(item.title)">
+                <span>{{ item.title }}</span>
+                <span [ngClass]="{ 'rotate-180': isOpen[item.title] }" class="transform transition-transform duration-300"><i class="fas fa-chevron-down"></i></span>
+              </div>
+              <ul *ngIf="isOpen[item.title]" class="space-y-2 ml-4">
+                <li *ngFor="let subItem of item.subItems">
+                  <a [routerLink]="subItem.route" class="block p-2 rounded text-gray-800 hover:bg-purple-300 hover:rounded-lg hover:text-white">{{ subItem.title }}</a>
+                </li>
+              </ul>
+            </ng-container>
+            <ng-container *ngIf="!item.subItems || !item.subItems.length">
+              <div class="flex items-center justify-between p-2 text-gray-800 hover:bg-purple-300 hover:rounded-lg hover:text-white cursor-pointer">
+                <a [routerLink]="item.route" class="w-full">{{ item.title }}</a>
+              </div>
+            </ng-container>
+          </li>
+        </ng-container>
+        <ng-container *ngIf="getUserType() === 'instructor'">
+          <li *ngFor="let item of instructor">
+            <div class="flex items-center justify-between p-2 text-gray-800 hover:bg-purple-300 hover:rounded-lg hover:text-white cursor-pointer">
+              <a [routerLink]="item.route" class="w-full">{{ item.title }}</a>
+            </div>
+          </li>
+        </ng-container>
+        <ng-container *ngIf="getUserType() === 'school_admin'">
+          <li *ngFor="let group of school_admin">
+            <ng-container *ngIf="group.subItems && group.subItems.length">
+              <div class="flex items-center justify-between p-2 text-gray-800 hover:bg-purple-300 hover:rounded-lg hover:text-white cursor-pointer" (click)="toggleDropdown(group.isOpenKey)">
+                <span>{{ group.title }}</span>
+                <span [ngClass]="{ 'rotate-180': isOpen[group.isOpenKey] }" class="transform transition-transform duration-300"><i class="fas fa-chevron-down"></i></span>
+              </div>
+              <ul *ngIf="isOpen[group.isOpenKey]" class="space-y-2 ml-4">
+                <li *ngFor="let subItem of group.subItems">
+                  <a [routerLink]="subItem.route" class="block p-2 rounded text-gray-800 hover:bg-purple-300 hover:rounded-lg hover:text-white">{{ subItem.title }}</a>
+                </li>
+              </ul>
+            </ng-container>
+            <ng-container *ngIf="!group.subItems || group.subItems.length === 1">
+              <div class="flex items-center justify-between p-2 text-gray-800 hover:bg-purple-300 hover:rounded-lg hover:text-white cursor-pointer">
+                <a *ngIf="group.subItems && group.subItems.length" [routerLink]="group.subItems[0].route" class="w-full">{{ group.subItems[0].title }}</a>
+              </div>
+            </ng-container>
+          </li>
+        </ng-container>
+        <ng-container *ngIf="getUserType() === 'department_admin'">
+          <li *ngFor="let item of department_admin">
+            <div class="flex items-center justify-between p-2 text-gray-800 hover:bg-purple-300 hover:rounded-lg hover:text-white cursor-pointer">
+              <a [routerLink]="item.route" class="w-full">{{ item.title }}</a>
+            </div>
+          </li>
+        </ng-container>
+        <li>
+          <div class="flex items-center justify-between p-2 text-gray-800 hover:bg-purple-300 hover:rounded-lg hover:text-white cursor-pointer" tabindex="0" (click)="logout()" (keyup.enter)="logout()">
+            <span>Logout</span>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+  

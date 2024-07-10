@@ -1,0 +1,181 @@
+<!-- Breadcrumb -->
+<div class="breadcrumb-bar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-12">
+        <div class="breadcrumb-list">
+          <nav aria-label="breadcrumb" class="page-breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a [routerLink]="routes.home">Home</a></li>
+              <li class="breadcrumb-item">Pages</li>
+              <li class="breadcrumb-item">Students List</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /Breadcrumb -->
+
+<!-- Page Wrapper -->
+<div class="page-content">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+
+        <!-- Filter -->
+        <div class="showing-list">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="d-flex align-items-center">
+                <div class="view-icons">
+                  <a [routerLink]="routes.students_grid" class="list-view"><i class="feather icon-grid"></i></a>
+                  <a [routerLink]="routes.students_list" class="list-view active"><i class="feather icon-list"></i></a>
+                </div>
+                <div class="show-result">
+                  <h4>Showing 1-9 of 50 results</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /Filter -->
+
+        <div class="row">
+
+          <!-- Instructor List -->
+          <div class="col-lg-12">
+            <div class="student-grid-blk">
+
+              <!-- Row alignment -->
+              @for (data of studentList; track data) {
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="student-list flex-fill">
+                      <div class="student-img">
+                        <a [routerLink]="routes.students_profile">
+                          <img class="img-fluid" alt="" [src]="data.img1">
+                        </a>
+                      </div>
+                      <div class="student-content">
+                        <h5><a [routerLink]="routes.students_profile">{{data.name1}}</a></h5>
+                        <h6>{{data.role1}}</h6>
+                        <div class="student-info">
+                          <div class="loc-blk d-flex justify-content-center">
+                            <img [src]="data.img2" class="me-1" alt="">
+                            <p>{{data.place1}}</p>
+                          </div>
+                          <ul class="list-unstyled inline-inline profile-info-social">
+                            <li class="list-inline-item">
+                              <a href="javascript:void(0)">
+                                <i class="fa-brands fa-facebook"></i>
+                              </a>
+                            </li>
+                            <li class="list-inline-item">
+                              <a href="javascript:void(0)">
+                                <i class="fa-brands fa-twitter"></i>
+                              </a>
+                            </li>
+                            <li class="list-inline-item">
+                              <a href="javascript:void(0)">
+                                <i class="fa-brands fa-instagram"></i>
+                              </a>
+                            </li>
+                            <li class="list-inline-item">
+                              <a href="javascript:void(0)">
+                                <i class="fa-brands fa-linkedin"></i>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="student-list flex-fill">
+                      <div class="student-img">
+                        <a [routerLink]="routes.students_profile">
+                          <img class="img-fluid" alt="" [src]="data.img3">
+                        </a>
+                      </div>
+                      <div class="student-content">
+                        <h5><a [routerLink]="routes.students_profile">{{data.name2}}</a></h5>
+                        <h6>{{data.role2}}</h6>
+                        <div class="student-info">
+                          <div class="loc-blk d-flex justify-content-center">
+                            <img [src]="data.img4" class="me-1" alt="">
+                            <p>{{data.place2}}</p>
+                          </div>
+                          <ul class="list-unstyled inline-inline profile-info-social">
+                            <li class="list-inline-item">
+                              <a href="javascript:void(0)">
+                                <i class="fa-brands fa-facebook"></i>
+                              </a>
+                            </li>
+                            <li class="list-inline-item">
+                              <a href="javascript:void(0)">
+                                <i class="fa-brands fa-twitter"></i>
+                              </a>
+                            </li>
+                            <li class="list-inline-item">
+                              <a href="javascript:void(0)">
+                                <i class="fa-brands fa-instagram"></i>
+                              </a>
+                            </li>
+                            <li class="list-inline-item">
+                              <a href="javascript:void(0)">
+                                <i class="fa-brands fa-linkedin"></i>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              }
+              <!-- /Row alignment -->
+            </div>
+          </div>
+          <!-- /Instructor List -->
+
+
+        </div>
+
+        <!-- /pagination -->
+        <div class="row">
+          <div class="col-md-12">
+            <ul class="pagination lms-page">
+              <li class="page-item prev">
+                <a class="page-link" href="javascript:void(0)" tabindex="-1"><i class="fas fa-angle-left"></i></a>
+              </li>
+              <li class="page-item first-page active">
+                <a class="page-link" href="javascript:void(0)">1</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="javascript:void(0)">2</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="javascript:void(0)">3</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="javascript:void(0)">4</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="javascript:void(0)">5</a>
+              </li>
+              <li class="page-item next">
+                <a class="page-link" href="javascript:void(0)"><i class="fas fa-angle-right"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- /pagination -->
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /Page Wrapper -->

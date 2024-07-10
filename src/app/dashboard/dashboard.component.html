@@ -1,0 +1,17 @@
+<div class="flex min-h-screen">
+  <our-sidebar [searchQuery]="searchQuery"></our-sidebar>
+  <div class="flex-1 flex flex-col">
+    <our-header (search)="handleSearch($event)"></our-header>
+    <main class="flex-1 p-6 bg-gray-50">
+      <router-outlet></router-outlet>
+      <div *ngIf="isMainRouteActive">
+        <div *ngIf="getUserType() === 'instructor'">
+          <div> i am {{ getUserType() }}</div>
+          <button class="btn btn-primary" (click)="showModal()">Add Course</button>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<app-course-modal [class.hidden]="!isModalVisible" (close)="closeModal()" (save)="saveCourse($event)"></app-course-modal>

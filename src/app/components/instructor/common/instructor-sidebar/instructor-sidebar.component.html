@@ -1,0 +1,46 @@
+<div class="settings-widget dash-profile">
+    <div class="profile-bg">
+        <div class="profile-img">
+            <a [routerLink]="routes.instructorProfile"><img src="assets/img/user/user-17.jpg" alt="Img"></a>
+        </div>
+    </div>
+    <div class="profile-name text-center">
+        <h4><a [routerLink]="routes.instructorProfile">Eugene Andre</a></h4>
+        <p>Instructor</p>
+        <a [routerLink]="routes.page_add_course" class="add-course btn-primary">Add New Course</a>
+    </div>
+</div>
+
+<div class="settings-widget account-settings">
+    <h3>Dashboard</h3>
+    <ul>
+        <li routerLinkActive="active"><a [routerLink]="routes.instructor_dashboard"><i class="bx bxs-tachometer"></i>Dashboard</a></li>
+        <li routerLinkActive="active"><a [routerLink]="routes.instructorProfile"><i class="bx bxs-user"></i>My Profile</a></li>
+        <li routerLinkActive="active"><a [routerLink]="routes.instructorEnrolledCourse"><i class="bx bxs-graduation"></i>Enrolled Courses</a></li>
+        <li routerLinkActive="active"><a [routerLink]="routes.instructorWishlist"><i class="bx bxs-heart"></i>Wishlist</a></li>
+        <li routerLinkActive="active"><a [routerLink]="routes.instructor_reviews"><i class="bx bxs-star"></i>Reviews</a></li>
+        <li routerLinkActive="active"><a [routerLink]="routes.instructorQuiz"><i class="bx bxs-shapes"></i>My Quiz Attempts</a></li>
+        <li routerLinkActive="active"><a [routerLink]="routes.instructor_orders"><i class="bx bxs-cart"></i>Order History</a></li>
+        <li routerLinkActive="active"><a [routerLink]="routes.instructorQA"><i class="bx bxs-bookmark-alt"></i>Question & Answer</a></li>
+        <li routerLinkActive="active"><a [routerLink]="routes.instructorReferral"><i class="bx bxs-user-plus"></i>Referrals</a></li>
+        <li routerLinkActive="active"><a [routerLink]="routes.instructor_chat"><i class="bx bxs-chat"></i>Messages</a></li>
+        <li routerLinkActive="active"><a [routerLink]="routes.instructor_notification"><i class="bx bxs-bell"></i>Notifications</a></li>
+        <li routerLinkActive="active"><a [routerLink]="routes.instructor_tickets"><i class="bx bxs-coupon"></i>Support Tickets</a></li>
+    </ul>
+    
+    <h3>Instructor</h3>
+    <ul>
+        <li routerLinkActive="active"><a [routerLink]="routes.instructor_course"><i class="bx bxs-rocket"></i>My Courses</a></li>
+        <li routerLinkActive="active"><a [routerLink]="routes.instructorAnnouncements"><i class="bx bxs-volume-full"></i>Announcements</a></li>
+        <li routerLinkActive="active"><a [routerLink]="routes.instructorwithdraw"><i class="bx bxs-wallet"></i>Withdrawls</a></li>
+        <li routerLinkActive="active"><a [routerLink]="routes.instructorQuizAttempts"><i class="bx bxs-shapes"></i>Quiz Attempts</a></li>
+        <li routerLinkActive="active"><a [routerLink]="routes.instructorAssignment"><i class="bx bxs-file"></i>Assignments</a></li>
+        <li routerLinkActive="active"><a [routerLink]="routes.instructor_earnings"><i class="bx bxs-badge-dollar"></i>Earnings</a></li>
+    </ul>
+
+    <h3>Account Settings</h3>
+    <ul>
+        <li [ngClass]="{'active': page === 'settings'}"><a [routerLink]="routes.instructorSettings"><i class="bx bxs-cog"></i>Settings</a></li>
+        <li routerLinkActive="active"><a [routerLink]="routes.home"><i class="bx bxs-log-out"></i>Logout</a></li>
+    </ul>
+</div>

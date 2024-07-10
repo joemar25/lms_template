@@ -1,0 +1,48 @@
+<header class="bg-white shadow-sm text-gray-700 px-4 py-2 flex items-center justify-between">
+  <div class="relative">
+    <input 
+      type="text" 
+      placeholder="Search now" 
+      class="px-4 py-2 pl-12 rounded-full focus:outline-none bg-gray-100"
+      (input)="onInput($event)"
+      (keyup.enter)="searchRoutes()"
+      [class.border-gray-300]="!isFocused"
+      [class.text-gray-500]="!isFocused"
+      [class.placeholder-gray-300]="!isFocused"
+      [class.border-pink-300]="isFocused"
+      [class.text-pink-300]="isFocused"
+      [class.placeholder-pink-300]="isFocused"
+      (focus)="onFocus()"
+      (blur)="onBlur()"
+    >
+    <div class="absolute inset-y-0 right-5 flex items-center pl-3 pointer-events-none">
+      <i class="fas fa-search"
+        [class.text-gray-300]="!isFocused"
+        [class.text-pink-300]="isFocused"
+      ></i>
+    </div>
+  </div>
+  
+  
+  
+  <div class="flex items-center space-x-2">
+    <button class="p-2 rounded-full focus:outline-none">
+      <i class="fas fa-video hover:text-pink-500 text-lg text-pink-300"></i>
+    </button>
+    <button class="p-2 rounded-full focus:outline-none">
+      <i class="fas fa-envelope hover:text-pink-500 text-lg text-pink-300"></i>
+    </button>
+    <button class="p-2 rounded-full focus:outline-none">
+      <i class="fas fa-bell hover:text-pink-500 text-lg text-pink-300"></i>
+    </button>
+
+    <!-- Profile Picture -->
+    <div class="flex items-center space-x-3 p-2">
+      <img src="assets/img/bini.jpeg" alt="Profile" class="w-10 h-10 rounded-xl object-cover">
+      <div>
+        <h1 class="text-sm text-gray-950 font-bold">Anton</h1>
+        <h1 class="text-pink-300 text-sm font-bold">{{ getUserType() }}</h1>
+      </div>
+    </div>
+  </div>
+</header>

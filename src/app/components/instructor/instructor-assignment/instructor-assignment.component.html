@@ -1,0 +1,114 @@
+<!-- Page Content -->
+<div class="page-content">
+    <div class="container">
+        <div class="row">
+            
+            <!-- Sidebar -->
+            <app-instructor-sidebar class="col-xl-3 col-lg-3 theiaStickySidebar"></app-instructor-sidebar>
+            <!-- /Sidebar -->
+            
+            <!-- Instructor Assignments -->
+            <div class="col-xl-9 col-lg-9">    
+                <div class="settings-widget card-details">
+                    <div class="profile-heading">
+                        <h3>Assignments</h3>
+                    </div>
+                    <div class="checkout-form">
+                        <div class="announcement-filter-head">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="input-block">
+                                        <label for="courses" class="form-label">Courses</label>
+                                        <mat-select class="custom-mat-select" [(value)]="selected">
+                                            <mat-option value="1">All</mat-option>
+                                            <mat-option value="angular">Javascript Course</mat-option>
+                                            <mat-option value="nodejs">Fullstack Web Developer</mat-option>
+                                            <mat-option value="react">UI/UX Design</mat-option>
+                                        </mat-select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="input-block">
+                                        <label for="sort" class="form-label">Sort By</label>
+                                        <mat-select class="custom-mat-select" [(value)]="selected2">
+                                            <mat-option value="1">Default</mat-option>
+                                            <mat-option value="angular">Newest</mat-option>
+                                            <mat-option value="nodejs">Oldest</mat-option>
+                                        </mat-select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="input-block">
+                                        <label for="offer" class="form-label">Sort By Offer</label>
+                                        <mat-select class="custom-mat-select" [(value)]="selected3">
+                                            <mat-option value="1">Paid</mat-option>
+                                            <mat-option value="angular">Unpaid</mat-option>
+                                        </mat-select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive custom-table">
+                            <table class="table table-nowrap mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>Assignment Name</th>
+                                        <th>Total Marks</th>
+                                        <th>Total Submit</th>
+                                        <th>Edit</th>
+                                        <th>Delete</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @for (data of tableData; track data) {
+                                    <tr>
+                                        <td>
+                                            <div class="announcement-table-data">
+                                                <h6>{{data.assignmentName}}</h6>
+                                                <p>Course: Sketch from A to Z (2024): Become an app designer</p>
+                                            </div>
+                                        </td>
+                                        <td>{{data.totalMarks}}</td>
+                                        <td>{{data.totalSubmit}}</td>
+                                        <td>
+                                            <a href="javascript:void(0)" class="d-flex align-items-center tab-title"><i class="bx bx-edit me-2"></i>Edit</a>
+                                        </td>
+                                        <td>
+                                            <a href="javascript:void(0)" class="d-flex align-items-center tab-title"><i class="bx bx-trash me-2"></i>Delete</a>
+                                        </td>
+                                    </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dash-pagination">
+                    <div class="row align-items-center">
+                        <div class="col-6">
+                            <p>Page 1 of 2</p>
+                        </div>
+                        <div class="col-6">
+                            <ul class="pagination">
+                                <li class="active">
+                                    <a href="javascript:void(0)">1</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">2</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><i class="bx bx-chevron-right"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>    
+            <!-- /Instructor Assignments -->
+
+        </div>
+    </div>
+</div>    
+<!-- /Page Content -->

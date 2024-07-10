@@ -1,0 +1,132 @@
+<!-- Student Header -->
+<div class="course-student-header">
+  <div class="container">
+    <div class="student-group">
+      <div class="course-group ">
+        <div class="course-group-img d-flex">
+          <a [routerLink]="routes.students_profile"><img src="assets/img/user/user11.jpg" alt="" class="img-fluid"></a>
+          <div class="d-flex align-items-center">
+            <div class="course-name">
+              <h4><a [routerLink]="routes.students_profile">Rolands R</a><span>Beginner</span></h4>
+              <p>Student</p>
+            </div>
+          </div>
+        </div>
+        <div class="course-share ">
+          <a href="javascript:void(0)" class="btn btn-primary">Account Settings</a>
+        </div>
+      </div>
+    </div>
+    <div class="my-student-list">
+      <ul>
+        <li><a  [routerLink]="routes.course_student">Courses</a></li>
+        <li><a class="active" [routerLink]="routes.page_course_course_wishlist">Wishlists</a></li>
+        <li><a [routerLink]="routes.page_course_message">Messages</a></li>
+        <li class="mb-0"><a [routerLink]="routes.page_purchase_history">Purchase history</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- /Student Header -->
+
+<!-- My Course -->
+<section class="course-content">
+  <div class="container">
+    <div class="student-widget">
+      <div class="student-widget-group">
+        <div class="row">
+          <div class="col-lg-12">
+
+            <!-- Filter -->
+            <div class="showing-list">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="show-filter choose-search-blk">
+                    <form action="#">
+                      <div class="mycourse-student align-items-center">
+                        <div class="student-search">
+                          <div class=" search-group">
+                            <i class="feather icon-search"></i>
+                            <input type="text" class="form-control" placeholder="Search our courses" >
+                          </div>
+                        </div>
+                        <div class="student-filter">
+                          <div class="input-block select-form mb-0">
+                            <mat-select class="custom-mat-select" placeholder="Newly published">
+                              <mat-option value="Newly published">Newly published</mat-option>
+                              <mat-option value="Angular">Angular</mat-option>
+                              <mat-option value="React">React</mat-option>
+                              <mat-option value="Node">Node</mat-option>
+                            </mat-select>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /Filter -->
+
+            <div class="row">
+              @for (data of courseWishlist; track data) {
+                <div class="col-xl-3 col-lg-4 col-md-6 d-flex" >
+                  <div class="course-box course-design d-flex " >
+                    <div class="product">
+                      <div class="product-img">
+                        <a [routerLink]="routes.page_course_details">
+                          <img class="img-fluid" alt="" [src]="data.img1">
+                        </a>
+                        <div class="price" [ngClass]="{'combo': data.idle === 'FREE'}">
+                          <h3>{{data.idle}}</h3>
+                          <h3>{{data.amount1}} <span>{{data.amount2}}</span></h3>
+                        </div>
+                      </div>
+                      <div class="product-content">
+                        <div class="course-group d-flex">
+                          <div class="course-group-img d-flex">
+                            <a [routerLink]="routes.students_profile"><img [src]="data.img2" alt="" class="img-fluid"></a>
+                            <div class="course-name">
+                              <h4><a [routerLink]="routes.students_profile">{{data.name}}</a></h4>
+                              <p>{{data.role}}</p>
+                            </div>
+                          </div>
+                          <div class="course-share d-flex align-items-center justify-content-center">
+                            <a href="javascript:void(0)" (click)="toggleClass(data)"><i class="fa-heart"  [ngClass]="data.active ? 'fa-solid' : 'fa-regular'"></i></a>
+                          </div>
+                        </div>
+                        <h3 class="title"><a [routerLink]="routes.page_course_details">{{data.content1}}</a></h3>
+                        <div class="course-info d-flex align-items-center border-bottom-0 pb-0">
+                          <div class="rating-img d-flex align-items-center">
+                            <img [src]="data.img3" alt="">
+                            <p>{{data.lesson}}</p>
+                          </div>
+                          <div class="course-view d-flex align-items-center">
+                            <img [src]="data.img4" alt="">
+                            <p>{{data.time}}</p>
+                          </div>
+                        </div>
+                        <div class="rating">
+                          <i class="fas fa-star filled me-1"></i>
+                          <i class="fas fa-star filled me-1"></i>
+                          <i class="fas fa-star filled me-1"></i>
+                          <i class="fas fa-star filled me-1"></i>
+                          <i class="fas fa-star me-1"></i>
+                          <span class="d-inline-block average-rating"><span>{{data.rating1}}</span> {{data.rating2}}</span>
+                        </div>
+                        <div class="all-btn all-category d-flex align-items-center">
+                          <a [routerLink]="routes.page_checkout" class="btn btn-primary">{{data.content2}}</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /My Course -->

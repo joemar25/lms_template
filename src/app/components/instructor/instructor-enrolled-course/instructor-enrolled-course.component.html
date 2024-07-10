@@ -1,0 +1,683 @@
+<!-- Page Content -->
+<div>
+    <div>
+        <div>
+            
+            <!-- sidebar -->
+            <app-instructor-sidebar></app-instructor-sidebar>
+            <!-- /Sidebar -->
+            
+            <!-- Instructor Courses -->
+            <div>    
+
+                <div>
+                    <div>
+                        <div>
+                            <h3>Enrolled Courses</h3>
+                        </div>
+                        <div>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <a href="javascript:void(0);" data-bs-toggle="tab" data-bs-target="#enroll-courses">Enrolled Courses (06)</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" data-bs-toggle="tab" data-bs-target="#active-courses">Active Courses (03)</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" data-bs-toggle="tab" data-bs-target="#complete-courses">Completed Courses (03)</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <div id="enroll-courses">
+                                    <div>
+
+                                        <!-- Course Grid -->
+                                        <div>
+                                            <div>
+                                                <div>
+                                                    <div>
+                                                        <a [routerLink]="routes.page_course_details">
+                                                            <img alt="Img" src="assets/img/course/course-02.jpg">
+                                                        </a>
+                                                        <div>
+                                                            <h3>$80 <span>$99.00</span></h3>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div>
+                                                            <div>
+                                                                <a [routerLink]="routes.instructorProfile"><img src="assets/img/user/user2.jpg" alt="Img"></a>
+                                                                <div>
+                                                                    <h4><a [routerLink]="routes.instructorProfile">Cooper</a></h4>
+                                                                    <p>Instructor</p>
+                                                                </div>
+                                                            </div>
+                                                            <div (click)="toggleClass(1)" (keydown)="toggleClass(1)" tabindex="1">
+                                                                <a href="javascript:void(0);"><i class="fa-regular fa-heart" [ngClass]="{ 'color-active': isClassAdded[1] }"></i></a>
+                                                            </div>
+                                                        </div>
+                                                        <h3><a [routerLink]="routes.page_course_details">Wordpress for Beginners - Master Wordpress Quickly</a></h3>
+                                                        <div>
+                                                            <div>
+                                                                <img src="assets/img/icon/icon-01.svg" alt="Img">
+                                                                <p>12+ Lesson</p>
+                                                            </div>
+                                                            <div>
+                                                                <img src="assets/img/icon/icon-02.svg" alt="Img">
+                                                                <p>70hr 30min</p>
+                                                            </div>
+                                                        </div>
+                                                        <div>							
+                                                            <i class="fas fa-star filled"></i>
+                                                            <i class="fas fa-star filled"></i>
+                                                            <i class="fas fa-star filled"></i>
+                                                            <i class="fas fa-star filled"></i>
+                                                            <i class="fas fa-star filled"></i>
+                                                            <span><span>5.0</span> (20)</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /Course Grid -->
+
+                                        <!-- Course Grid -->
+                                        <div>
+                                            <div>
+                                                <div>
+                                                    <div>
+                                                        <a [routerLink]="routes.page_course_details">
+                                                            <img alt="Img" src="assets/img/course/course-03.jpg">
+                                                        </a>
+                                                        <div>
+                                                            <h3>FREE</h3>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div>
+                                                            <div>
+                                                                <a [routerLink]="routes.instructorProfile"><img src="assets/img/user/user5.jpg" alt="Img"></a>
+                                                                <div>
+                                                                    <h4><a [routerLink]="routes.instructorProfile">Jenny</a></h4>
+                                                                    <p>Instructor</p>
+                                                                </div>
+                                                            </div>
+                                                            <div (click)="toggleClass(2)" (keydown)="toggleClass(2)" tabindex="1">
+                                                                <a href="javascript:void(0);"><i class="fa-regular fa-heart" [ngClass]="{ 'color-active': isClassAdded[2] }"></i></a>
+                                                            </div>
+                                                        </div>
+                                                        <h3><a [routerLink]="routes.page_course_details">Sketch from A to Z (2022): Become an app designer</a></h3>
+                                                        <div>
+                                                            <div>
+                                                                <!-- <img src="assets/img/icon/icon-01.svg" alt="Img"> -->
+                                                                <p>10+ Lesson</p>
+                                                            </div>
+                                                            <div>
+                                                                <!-- <img src="assets/img/icon/icon-02.svg" alt="Img"> -->
+                                                                <p>40hr 10min</p>
+                                                            </div>
+                                                        </div>
+                                                        <div>							
+                                                            <i class="fas fa-star filled"></i>
+                                                            <i class="fas fa-star filled"></i>
+                                                            <i class="fas fa-star filled"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <span><span>3.0</span> (18)</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /Course Grid -->
+
+                                        <!-- Course Grid -->
+                                        <div>
+                                            <div>
+                                                <div>
+                                                    <div>
+                                                        <a [routerLink]="routes.page_course_details">
+                                                            <img alt="Img" src="assets/img/course/course-04.jpg">
+                                                        </a>
+                                                        <div>
+                                                            <h3>$65 <span>$70.00</span></h3>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div>
+                                                            <div>
+                                                                <a [routerLink]="routes.instructorProfile"><img src="assets/img/user/user4.jpg" alt="Img"></a>
+                                                                <div>
+                                                                    <h4><a [routerLink]="routes.instructorProfile">Nicole Brown</a></h4>
+                                                                    <p>Instructor</p>
+                                                                </div>
+                                                            </div>
+                                                            <div (click)="toggleClass(3)" (keydown)="toggleClass(3)" tabindex="1">
+                                                                <a href="javascript:void(0);"><i class="fa-regular fa-heart" [ngClass]="{ 'color-active': isClassAdded[3] }"></i></a>
+                                                            </div>
+                                                        </div>
+                                                        <h3><a [routerLink]="routes.page_course_details">Learn Angular Fundamentals From beginning to advance level</a></h3>
+                                                        <div>
+                                                            <div>
+                                                                <!-- <img src="assets/img/icon/icon-01.svg" alt="Img"> -->
+                                                                <p>15+ Lesson</p>
+                                                            </div>
+                                                            <div>
+                                                                <!-- <img src="assets/img/icon/icon-02.svg" alt="Img"> -->
+                                                                <p>80hr 40min</p>
+                                                            </div>
+                                                        </div>
+                                                        <div>							
+                                                            <i class="fas fa-star filled"></i>
+                                                            <i class="fas fa-star filled"></i>
+                                                            <i class="fas fa-star filled"></i>
+                                                            <i class="fas fa-star filled"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <span><span>4.0</span> (10)</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /Course Grid -->
+
+                                        <!-- Course Grid -->
+                                        <div>
+                                            <div>
+                                                <div>
+                                                    <div>
+                                                        <a [routerLink]="routes.page_course_details">
+                                                            <img alt="Img" src="assets/img/course/course-05.jpg">
+                                                        </a>
+                                                        <div>
+                                                            <h3>FREE</h3>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div>
+                                                            <div>
+                                                                <a [routerLink]="routes.instructorProfile"><img src="assets/img/user/user3.jpg" alt="Img"></a>
+                                                                <div>
+                                                                    <h4><a [routerLink]="routes.instructorProfile">John Smith</a></h4>
+                                                                    <p>Instructor</p>
+                                                                </div>
+                                                            </div>
+                                                            <div (click)="toggleClass(4)" (keydown)="toggleClass(4)" tabindex="1">
+                                                                <a href="javascript:void(0);"><i class="fa-regular fa-heart" [ngClass]="{ 'color-active': isClassAdded[4] }"></i></a>
+                                                            </div>
+                                                        </div>
+                                                        <h3><a [routerLink]="routes.page_course_details">Build Responsive Real World Websites with Crash Course</a></h3>
+                                                        <div>
+                                                            <div>
+                                                                <!-- <img src="assets/img/icon/icon-01.svg" alt="Img"> -->
+                                                                <p>12+ Lesson</p>
+                                                            </div>
+                                                            <div>
+                                                                <!-- <img src="assets/img/icon/icon-02.svg" alt="Img"> -->
+                                                                <p>70hr 30min</p>
+                                                            </div>
+                                                        </div>
+                                                        <div>							
+                                                            <i class="fas fa-star filled"></i>
+                                                            <i class="fas fa-star filled"></i>
+                                                            <i class="fas fa-star filled"></i>
+                                                            <i class="fas fa-star filled"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <span><span>4.0</span> (15)</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /Course Grid -->
+
+                                        <!-- Course Grid -->
+                                        <div>
+                                            <div>
+                                                <div>
+                                                    <div>
+                                                        <a [routerLink]="routes.page_course_details">
+                                                            <img alt="Img" src="assets/img/course/course-07.jpg">
+                                                        </a>
+                                                        <div>
+                                                            <h3>$70 <span>$80.00</span></h3>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div>
+                                                            <div>
+                                                                <a [routerLink]="routes.instructorProfile"><img src="assets/img/user/user6.jpg" alt="Img"></a>
+                                                                <div>
+                                                                    <h4><a [routerLink]="routes.instructorProfile">Stella Johnson</a></h4>
+                                                                    <p>Instructor</p>
+                                                                </div>
+                                                            </div>
+                                                            <div (click)="toggleClass(5)" (keydown)="toggleClass(5)" tabindex="1">
+                                                                <a href="javascript:void(0);"><i class="fa-regular fa-heart" [ngClass]="{ 'color-active': isClassAdded[5] }"></i></a>
+                                                            </div>
+                                                        </div>
+                                                        <h3><a [routerLink]="routes.page_course_details">Learn JavaScript and Express to become a Expert</a></h3>
+                                                        <div>
+                                                            <div>
+                                                                <!-- <img src="assets/img/icon/icon-01.svg" alt="Img"> -->
+                                                                <p>15+ Lesson</p>
+                                                            </div>
+                                                            <div>
+                                                                <!-- <img src="assets/img/icon/icon-02.svg" alt="Img"> -->
+                                                                <p>70hr 30min</p>
+                                                            </div>
+                                                        </div>
+                                                        <div>							
+                                                            <i class="fas fa-star filled"></i>
+                                                            <i class="fas fa-star filled"></i>
+                                                            <i class="fas fa-star filled"></i>
+                                                            <i class="fas fa-star filled"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <span><span>4.6</span> (15)</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /Course Grid -->
+
+                                        <!-- Course Grid -->
+                                        <div>
+                                            <div>
+                                                <div>
+                                                    <div>
+                                                        <a [routerLink]="routes.page_course_details">
+                                                            <img alt="Img" src="assets/img/course/course-08.jpg">
+                                                        </a>
+                                                        <div>
+                                                            <h3>FREE</h3>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div>
+                                                            <div>
+                                                                <a [routerLink]="routes.instructorProfile"><img src="assets/img/user/user1.jpg" alt="Img"></a>
+                                                                <div>
+                                                                    <h4><a [routerLink]="routes.instructorProfile">Nicole Brown</a></h4>
+                                                                    <p>Instructor</p>
+                                                                </div>
+                                                            </div>
+                                                            <div (click)="toggleClass(6)" (keydown)="toggleClass(6)" tabindex="1">
+                                                                <a href="javascript:void(0);"><i class="fa-regular fa-heart" [ngClass]="{ 'color-active': isClassAdded[6] }"></i></a>
+                                                            </div>
+                                                        </div>
+                                                        <h3><a [routerLink]="routes.page_course_details">Introduction to Programming- Python & Java</a></h3>
+                                                        <div>
+                                                            <div>
+                                                                <!-- <img src="assets/img/icon/icon-01.svg" alt="Img"> -->
+                                                                <p>10+ Lesson</p>
+                                                            </div>
+                                                            <div>
+                                                                <!-- <img src="assets/img/icon/icon-02.svg" alt="Img"> -->
+                                                                <p>70hr 30min</p>
+                                                            </div>
+                                                        </div>
+                                                        <div>							
+                                                            <i class="fas fa-star filled"></i>
+                                                            <i class="fas fa-star filled"></i>
+                                                            <i class="fas fa-star filled"></i>
+                                                            <i class="fas fa-star filled"></i>
+                                                            <i class="fas fa-star filled"></i>
+                                                            <span><span>5.0</span> (13)</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /Course Grid -->
+
+                                    </div>
+                                </div>
+
+                                <div id="active-courses">
+                                    <div>
+
+                                        <!-- Course Grid -->
+                                        <div>
+                                            <div>
+                                                <div>
+                                                    <div>
+                                                        <a [routerLink]="routes.page_course_details">
+                                                            <img alt="Img" src="assets/img/course/course-04.jpg">
+                                                        </a>
+                                                        <div>
+                                                            <h3>$65 <span>$70.00</span></h3>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div>
+                                                            <div>
+                                                                <a [routerLink]="routes.instructorProfile"><img src="assets/img/user/user4.jpg" alt="Img"></a>
+                                                                <div>
+                                                                    <h4><a [routerLink]="routes.instructorProfile">Nicole Brown</a></h4>
+                                                                    <p>Instructor</p>
+                                                                </div>
+                                                            </div>
+                                                            <div (click)="toggleClass(7)" (keydown)="toggleClass(7)" tabindex="1">
+                                                                <a href="javascript:void(0);"><i class="fa-regular fa-heart" [ngClass]="{ 'color-active': isClassAdded[7] }"></i></a>
+                                                            </div>
+                                                        </div>
+                                                        <h3><a [routerLink]="routes.page_course_details">Learn Angular Fundamentals From beginning to advance level</a></h3>
+                                                        <div>
+                                                            <div>
+                                                                <!-- <img src="assets/img/icon/icon-01.svg" alt="Img"> -->
+                                                                <p>15+ Lesson</p>
+                                                            </div>
+                                                            <div>
+                                                                <!-- <img src="assets/img/icon/icon-02.svg" alt="Img"> -->
+                                                                <p>80hr 40min</p>
+                                                            </div>
+                                                        </div>
+                                                        <div>							
+                                                            <i class="fas fa-star filled"></i>
+                                                            <i class="fas fa-star filled"></i>
+                                                            <i class="fas fa-star filled"></i>
+                                                            <i class="fas fa-star filled"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <span><span>4.0</span> (10)</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /Course Grid -->
+
+                                        <!-- Course Grid -->
+                                        <div>
+                                            <div>
+                                                <div>
+                                                    <div>
+                                                        <a [routerLink]="routes.page_course_details">
+                                                            <img alt="Img" src="assets/img/course/course-07.jpg">
+                                                        </a>
+                                                        <div>
+                                                            <h3>$70 <span>$80.00</span></h3>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div>
+                                                            <div>
+                                                                <a [routerLink]="routes.instructorProfile"><img src="assets/img/user/user6.jpg" alt="Img"></a>
+                                                                <div>
+                                                                    <h4><a [routerLink]="routes.instructorProfile">Stella Johnson</a></h4>
+                                                                    <p>Instructor</p>
+                                                                </div>
+                                                            </div>
+                                                            <div (click)="toggleClass(8)" (keydown)="toggleClass(8)" tabindex="1">
+                                                                <a href="javascript:void(0);"><i class="fa-regular fa-heart" [ngClass]="{ 'color-active': isClassAdded[8] }"></i></a>
+                                                            </div>
+                                                        </div>
+                                                        <h3><a [routerLink]="routes.page_course_details">Learn JavaScript and Express to become a Expert</a></h3>
+                                                        <div>
+                                                            <div>
+                                                                <!-- <img src="assets/img/icon/icon-01.svg" alt="Img"> -->
+                                                                <p>15+ Lesson</p>
+                                                            </div>
+                                                            <div>
+                                                                <!-- <img src="assets/img/icon/icon-02.svg" alt="Img"> -->
+                                                                <p>70hr 30min</p>
+                                                            </div>
+                                                        </div>
+                                                        <div>							
+                                                            <i class="fas fa-star filled"></i>
+                                                            <i class="fas fa-star filled"></i>
+                                                            <i class="fas fa-star filled"></i>
+                                                            <i class="fas fa-star filled"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <span><span>4.6</span> (15)</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /Course Grid -->
+
+                                        <!-- Course Grid -->
+                                        <div>
+                                            <div>
+                                                <div>
+                                                    <div>
+                                                        <a [routerLink]="routes.page_course_details">
+                                                            <img alt="Img" src="assets/img/course/course-08.jpg">
+                                                        </a>
+                                                        <div>
+                                                            <h3>FREE</h3>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div>
+                                                            <div>
+                                                                <a [routerLink]="routes.instructorProfile"><img src="assets/img/user/user1.jpg" alt="Img"></a>
+                                                                <div>
+                                                                    <h4><a [routerLink]="routes.instructorProfile">Nicole Brown</a></h4>
+                                                                    <p>Instructor</p>
+                                                                </div>
+                                                            </div>
+                                                            <div (click)="toggleClass(9)" (keydown)="toggleClass(9)" tabindex="1">
+                                                                <a href="javascript:void(0);"><i class="fa-regular fa-heart" [ngClass]="{ 'color-active': isClassAdded[9] }"></i></a>
+                                                            </div>
+                                                        </div>
+                                                        <h3><a [routerLink]="routes.page_course_details">Introduction to Programming- Python & Java</a></h3>
+                                                        <div>
+                                                            <div>
+                                                                <!-- <img src="assets/img/icon/icon-01.svg" alt="Img"> -->
+                                                                <p>10+ Lesson</p>
+                                                            </div>
+                                                            <div>
+                                                                <!-- <img src="assets/img/icon/icon-02.svg" alt="Img"> -->
+                                                                <p>70hr 30min</p>
+                                                            </div>
+                                                        </div>
+                                                        <div>							
+                                                            <i class="fas fa-star filled"></i>
+                                                            <i class="fas fa-star filled"></i>
+                                                            <i class="fas fa-star filled"></i>
+                                                            <i class="fas fa-star filled"></i>
+                                                            <i class="fas fa-star filled"></i>
+                                                            <span><span>5.0</span> (13)</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /Course Grid -->
+
+                                    </div>
+                                </div>
+
+                                <div id="complete-courses">
+                                    <div>
+
+                                        <!-- Course Grid -->
+                                        <div>
+                                            <div>
+                                                <div>
+                                                    <div>
+                                                        <a [routerLink]="routes.page_course_details">
+                                                            <img alt="Img" src="assets/img/course/course-03.jpg">
+                                                        </a>
+                                                        <div>
+                                                            <h3>FREE</h3>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div>
+                                                            <div>
+                                                                <a [routerLink]="routes.instructorProfile"><img src="assets/img/user/user5.jpg" alt="Img"></a>
+                                                                <div>
+                                                                    <h4><a [routerLink]="routes.instructorProfile">Jenny</a></h4>
+                                                                    <p>Instructor</p>
+                                                                </div>
+                                                            </div>
+                                                            <div (click)="toggleClass(10)" (keydown)="toggleClass(10)" tabindex="1">
+                                                                <a href="javascript:void(0);"><i class="fa-regular fa-heart" [ngClass]="{ 'color-active': isClassAdded[10] }"></i></a>
+                                                            </div>
+                                                        </div>
+                                                        <h3><a [routerLink]="routes.page_course_details">Sketch from A to Z (2022): Become an app designer</a></h3>
+                                                        <div>
+                                                            <div>
+                                                                <!-- <img src="assets/img/icon/icon-01.svg" alt="Img"> -->
+                                                                <p>10+ Lesson</p>
+                                                            </div>
+                                                            <div>
+                                                                <!-- <img src="assets/img/icon/icon-02.svg" alt="Img"> -->
+                                                                <p>40hr 10min</p>
+                                                            </div>
+                                                        </div>
+                                                        <div>							
+                                                            <i class="fas fa-star filled"></i>
+                                                            <i class="fas fa-star filled"></i>
+                                                            <i class="fas fa-star filled"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <span><span>3.0</span> (18)</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /Course Grid -->
+
+                                        <!-- Course Grid -->
+                                        <div>
+                                            <div>
+                                                <div>
+                                                    <div>
+                                                        <a [routerLink]="routes.page_course_details">
+                                                            <img alt="Img" src="assets/img/course/course-04.jpg">
+                                                        </a>
+                                                        <div>
+                                                            <h3>$65 <span>$70.00</span></h3>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div>
+                                                            <div>
+                                                                <a [routerLink]="routes.instructorProfile"><img src="assets/img/user/user4.jpg" alt="Img"></a>
+                                                                <div>
+                                                                    <h4><a [routerLink]="routes.instructorProfile">Nicole Brown</a></h4>
+                                                                    <p>Instructor</p>
+                                                                </div>
+                                                            </div>
+                                                            <div (click)="toggleClass(11)" (keydown)="toggleClass(11)" tabindex="1">
+                                                                <a href="javascript:void(0);"><i class="fa-regular fa-heart" [ngClass]="{ 'color-active': isClassAdded[11] }"></i></a>
+                                                            </div>
+                                                        </div>
+                                                        <h3><a [routerLink]="routes.page_course_details">Learn Angular Fundamentals From beginning to advance level</a></h3>
+                                                        <div>
+                                                            <div>
+                                                                <!-- <img src="assets/img/icon/icon-01.svg" alt="Img"> -->
+                                                                <p>15+ Lesson</p>
+                                                            </div>
+                                                            <div>
+                                                                <!-- <img src="assets/img/icon/icon-02.svg" alt="Img"> -->
+                                                                <p>80hr 40min</p>
+                                                            </div>
+                                                        </div>
+                                                        <div>							
+                                                            <i class="fas fa-star filled"></i>
+                                                            <i class="fas fa-star filled"></i>
+                                                            <i class="fas fa-star filled"></i>
+                                                            <i class="fas fa-star filled"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <span><span>4.0</span> (10)</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /Course Grid -->
+
+                                        <!-- Course Grid -->
+                                        <div>
+                                            <div>
+                                                <div>
+                                                    <div>
+                                                        <a [routerLink]="routes.page_course_details">
+                                                            <img alt="Img" src="assets/img/course/course-07.jpg">
+                                                        </a>
+                                                        <div>
+                                                            <h3>$70 <span>$80.00</span></h3>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div>
+                                                            <div>
+                                                                <a [routerLink]="routes.instructorProfile"><img src="assets/img/user/user6.jpg" alt="Img"></a>
+                                                                <div>
+                                                                    <h4><a [routerLink]="routes.instructorProfile">Stella Johnson</a></h4>
+                                                                    <p>Instructor</p>
+                                                                </div>
+                                                            </div>
+                                                            <div (click)="toggleClass(12)" (keydown)="toggleClass(12)" tabindex="1">
+                                                                <a href="javascript:void(0);"><i class="fa-regular fa-heart" [ngClass]="{ 'color-active': isClassAdded[12] }"></i></a>
+                                                            </div>
+                                                        </div>
+                                                        <h3><a [routerLink]="routes.page_course_details">Learn JavaScript and Express to become a Expert</a></h3>
+                                                        <div>
+                                                            <div>
+                                                                <!-- <img src="assets/img/icon/icon-01.svg" alt="Img"> -->
+                                                                <p>15+ Lesson</p>
+                                                            </div>
+                                                            <div>
+                                                                <!-- <img src="assets/img/icon/icon-02.svg" alt="Img"> -->
+                                                                <p>70hr 30min</p>
+                                                            </div>
+                                                        </div>
+                                                        <div>							
+                                                            <i class="fas fa-star filled"></i>
+                                                            <i class="fas fa-star filled"></i>
+                                                            <i class="fas fa-star filled"></i>
+                                                            <i class="fas fa-star filled"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <span><span>4.6</span> (15)</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /Course Grid -->
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div>
+                        <div>
+                            <p>Page 1 of 2</p>
+                        </div>
+                        <div>
+                            <ul>
+                                <li>
+                                    <a href="javascript:void(0);">1</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">2</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);"><i class="bx bx-chevron-right"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>    
+            <!-- /Instructor Courses -->
+            
+        </div>
+    </div>
+</div>    
+<!-- /Page Content -->

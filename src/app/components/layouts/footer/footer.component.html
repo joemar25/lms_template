@@ -1,0 +1,46 @@
+<!-- Footer -->
+<footer class="footer">
+
+  <!-- Footer Top -->
+  @if (base === 'home') {
+    <div class="footer-top aos" data-aos="fade-up" data-aos-duration="1500">
+      <app-footer-top-container></app-footer-top-container>
+    </div>
+  }
+  @if (base !== 'home') {
+    <div class="footer-top">
+      <app-footer-top-container></app-footer-top-container>
+    </div>
+  }
+  <!-- /Footer Top -->
+
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+    <div class="container">
+
+      <!-- Copyright -->
+      <div class="copyright">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="privacy-policy">
+              <ul>
+                <li><a [routerLink]="routes.page_term_condition">Terms</a></li>
+                <li><a [routerLink]="routes.page_privacy_policy">Privacy</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="copyright-text">
+              <p class="mb-0">&copy; 2022 QuanbyLMS. All rights reserved.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /Copyright -->
+
+    </div>
+  </div>
+  <!-- /Footer Bottom -->
+
+</footer>
+<!-- /Footer -->

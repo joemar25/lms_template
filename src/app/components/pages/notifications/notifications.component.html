@@ -1,0 +1,96 @@
+<!-- Breadcrumb -->
+<div class="breadcrumb-bar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-12">
+        <div class="breadcrumb-list">
+          <nav aria-label="breadcrumb" class="page-breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a [routerLink]="routes.home">Home</a></li>
+              <li class="breadcrumb-item" aria-current="page">Pages</li>
+              <li class="breadcrumb-item" aria-current="page">Notifications</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /Breadcrumb -->
+
+<!-- Notification -->
+<section class="course-content">
+  <div class="container">
+
+    <div class="title-sec">
+      <div class="row">
+        <div class="col-sm-6 col-lg-5">
+          <h2>Notifications</h2>
+          <p>Improve the way your work, discover a brand new tool and drop the hassle once and for all.</p>
+        </div>
+        <div class="col-sm-6 col-lg-7">
+          <div class="text-end">
+            <a href="javascript:void(0)" class="btn btn-mark">Mark All as Read</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Notifications List -->
+    <div class="notify-sec">
+      <div class="row">
+        <div class="col-md-12">
+          <h5>Today</h5>
+          @for (data of notificationsToday; track data) {
+            <div class="notify-item">
+              <div class="row align-items-center">
+                <div class="col-md-9">
+                  <div class="notify-content">
+                    <a [routerLink]="routes.instructor_instructor_profile">
+                      <img class="avatar-img semirounded-circle" [src]="data.img" alt="User Image">
+                    </a>
+                    <div class="notify-detail">
+                      <h6><a [routerLink]="routes.instructor_instructor_profile">{{data.name}} </a><span>{{data.time}}</span></h6>
+                      <p>{{data.content}}</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="text-md-end">
+                    <a href="javascript:void(0)" class="btn">{{data.setting}}</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          }
+          <h5>Yesterday</h5>
+          @for (data of notificationsYesterday; track data) {
+            <div class="notify-item">
+              <div class="row align-items-center">
+                <div class="col-md-9">
+                  <div class="notify-content">
+                    <a [routerLink]="routes.instructor_instructor_profile">
+                      <img class="avatar-img semirounded-circle" [src]="data.img" alt="User Image">
+                    </a>
+                    <div class="notify-detail">
+                      <h6><a [routerLink]="routes.instructor_instructor_profile">{{data.name}}</a> <span>{{data.time}}</span></h6>
+                      <p>{{data.content}}</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="text-md-end">
+                    <a href="javascript:void(0)" class="btn">{{data.setting}}</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+    <!-- /Notifications List -->
+
+  </div>
+</section>
+<!-- /Notification -->

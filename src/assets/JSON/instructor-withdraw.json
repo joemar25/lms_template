@@ -1,0 +1,86 @@
+{
+    "data": [
+        {
+           
+            "withdrawalMethod": "Paypal",
+            "requestedOn": "March 20, 2024 ",
+            "time":"10:30 AM",
+            "amount": "$100",
+            "status": "Pending"
+        },
+        {
+           
+            "withdrawalMethod": "Paypal ",
+            "requestedOn": "March 24, 2024 ",
+            "time":"11:40 AM",
+            "amount": "$120",
+            "status": "Cancelled"
+        },
+        {
+            
+            "withdrawalMethod": "Paypal",
+            "requestedOn": "March 26, 2024 ",
+            "time":"01:15 PM",
+            "amount": "$300",
+            "status": "Pending"
+        },
+        {
+            
+            "withdrawalMethod": "Paypal ",
+            "requestedOn": "April 02, 2024 ",
+            "time":"09:10 AM",
+            "amount": "$140",
+            "status": "Success"
+        },
+        {
+           
+            "withdrawalMethod": "Paypal ",
+            "requestedOn": "March 20, 2024 ",
+            "time":"10:30 AM",
+            "amount": "$100",
+            "status": "Pending"
+        },
+        {
+            
+            "withdrawalMethod": "Paypal ",
+            "requestedOn": "March 24, 2024 ",
+            "time":"11:40 AM",
+            "amount": "$120",
+            "status": "Cancelled"
+        },
+        {
+            
+            "withdrawalMethod": "Paypal ",
+            "requestedOn": "March 26, 2024",
+            "time":"01:15 PM",
+            "amount": "$300",
+            "status": "Pending"
+        },
+        {
+            
+            "withdrawalMethod": "Paypal ",
+            "requestedOn": "April 02, 2024 ",
+            "time":"09:10 AM",
+            "amount": "$140",
+            "status": "Success"
+        },
+        {
+            
+            "withdrawalMethod": "Paypal ",
+            "requestedOn": "May 20, 2024 ",
+            "time":"03:00 PM",
+            "amount": "$460",
+            "status": "Pending"
+        },
+        {
+            
+            "withdrawalMethod": "Paypal ",
+            "requestedOn": "June 22, 2024 ",
+            "time":"06:40 PM",
+            "amount": "$200",
+            "status": "Cancelled"
+        }
+    ],
+    "totalData": 6
+  }
+  

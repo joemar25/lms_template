@@ -1,0 +1,26 @@
+.color-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 2rem;
+
+  th,
+  td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+
+  th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+}
+
+.color-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-block;
+  border: 1px solid #000;
+  cursor: pointer;
+}

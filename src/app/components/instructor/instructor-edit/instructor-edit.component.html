@@ -1,0 +1,301 @@
+<!-- Breadcrumb -->
+<div>
+  <div>
+    <div>
+      <div>
+        <nav aria-label="breadcrumb">
+          <ol>
+            <li><a [routerLink]="routes.home">Home</a></li>
+            <li aria-current="page">Courses</li>
+            <li aria-current="page">All Courses</li>
+            <li aria-current="page">The Complete Web Developer Course 2.0</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /Breadcrumb -->
+
+<!-- Profile Info -->
+<div>
+  <div>
+    <div>
+      <div>
+        <a [routerLink]="routes.instructor_dashboard">
+          <img src="assets/img/instructor/profile-avatar.jpg" alt="Img">
+        </a>
+        <h4><a [routerLink]="routes.instructor_dashboard">Jenny Wilson</a><span>Beginner</span></h4>
+        <p>Instructor</p>
+        <ul>
+          <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /Profile Info -->
+
+<!-- Course Content -->
+<section>
+  <div>
+    <div>
+      <div>
+        <!-- Overview -->
+        <div>
+          <div>
+            <div>
+              <h5>About Me</h5>
+              <a href="#"><i class="fa-regular fa-pen-to-square"></i></a>
+            </div>
+            <p>
+              Very well thought out and articulate communication. Clear milestones, deadlines and fast work.
+              Patience. Infinite patience. No shortcuts. Even if the client is being careless.
+            </p>
+            <p>
+              As a highly skilled and successful product development and design specialist with more than 4 Years of experience,
+              my experience lies in successfully conceptualizing, designing, and modifying consumer products specific to interior design and home furnishings.
+            </p>
+          </div>
+        </div>
+        <!-- /Overview -->
+
+        <!-- Education Content -->
+        <div>
+          <div>
+            <div>
+              <h5>Education</h5>
+              <a href="#"><i class="fa-regular fa-pen-to-square"></i></a>
+            </div>
+            @for (data of instructorEditEducation; track data) {
+              <div>
+                <div>
+                  <div><span>{{ data.letter }}</span></div>
+                  <div>
+                    <h6>{{ data.heading }}</h6>
+                    <p>{{ data.paragraph }}</p>
+                    <p>{{ data.content }}</p>
+                  </div>
+                </div>
+              </div>
+            }
+          </div>
+        </div>
+        <!-- /Education Content -->
+
+        <!-- Experience Content -->
+        <div>
+          <div>
+            <div>
+              <h5>Experience</h5>
+              <a href="#"><i class="fa-regular fa-pen-to-square"></i></a>
+            </div>
+            @for (data of instructorEditExperience; track data) {
+              <div>
+                <div>
+                  <div><span>{{ data.letter }}</span></div>
+                  <div>
+                    <h6>{{ data.heading }}</h6>
+                    <p>{{ data.paragraph }}</p>
+                    <p>{{ data.content }}</p>
+                  </div>
+                </div>
+              </div>
+            }
+          </div>
+        </div>
+        <!-- /Experience Content -->
+
+        <!-- Courses Content -->
+        <div>
+          <div>
+            <h5>Courses</h5>
+            <div>
+              @for (data of instructorEditCourses; track data) {
+                <div>
+                  <div>
+                    <div>
+                      <div>
+                        <a [routerLink]="routes.page_course_details">
+                          <img alt="" [src]="data.img1">
+                        </a>
+                        <div><h3>{{ data.newPrice }} <span>{{ data.oldPrice }}</span></h3></div>
+                      </div>
+                      <div>
+                        <div>
+                          <div>
+                            <a [routerLink]="routes.instructor_instructor_profile"><img [src]="data.img2" alt=""></a>
+                            <div>
+                              <h4><a [routerLink]="routes.instructor_instructor_profile">{{ data.name }}</a></h4>
+                              <p>{{ data.role }}</p>
+                            </div>
+                          </div>
+                          <div>
+                            <a href="#" (click)="toggleClass(data)"><i class="fa-heart" [ngClass]="data.active ? 'fa-solid' : 'fa-regular'"></i></a>
+                          </div>
+                        </div>
+                        <h3><a [routerLink]="routes.page_course_details">{{ data.content1 }}</a></h3>
+                        <div>
+                          <div>
+                            <img [src]="data.img3" alt="">
+                            <p>{{ data.lesson }}</p>
+                          </div>
+                          <div>
+                            <img [src]="data.img4" alt="">
+                            <p>{{ data.time }}</p>
+                          </div>
+                        </div>
+                        <div>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <span><span>{{ data.rating1 }}</span> {{ data.rating2 }}</span>
+                        </div>
+                        <div>
+                          <a [routerLink]="routes.page_checkout">{{ data.content2 }}</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              }
+            </div>
+          </div>
+        </div>
+        <!-- /Courses Content -->
+
+        <!-- Reviews -->
+        <div>
+          <div>
+            <h5>Reviews</h5>
+            @for (data of instructorEditReviews; track data) {
+              <div>
+                <div>
+                  <div>
+                    <div>
+                      <img [src]="data.img" alt="img">
+                    </div>
+                    <div>
+                      <h5>{{ data.name }}</h5>
+                      <p>{{ data.role }}</p>
+                    </div>
+                  </div>
+                  <div>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <p>{{ data.content }}</p>
+                <a href="#"><i class="feather icon-corner-up-left"></i> {{ data.setting }}</a>
+              </div>
+            }
+          </div>
+        </div>
+        <!-- /Reviews -->
+
+        <!-- Comment -->
+        <div>
+          <div>
+            <h5>Add a review</h5>
+            <form>
+              <div>
+                <div>
+                  <input type="text" placeholder="Full Name">
+                </div>
+                <div>
+                  <input type="email" placeholder="Email">
+                </div>
+              </div>
+              <input type="text" placeholder="Subject">
+              <textarea rows="4" placeholder="Your Comments"></textarea>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+        <!-- /Comment -->
+      </div>
+
+      <div>
+        <!-- Right Sidebar Tags Label -->
+        <div>
+          <div>
+            <div>
+              <h5>Professional Skills</h5>
+              <a href="#"><i class="fa-regular fa-pen-to-square"></i></a>
+            </div>
+            <ul>
+              <li><a href="#">User Interface Design</a></li>
+              <li><a href="#">Web Development</a></li>
+              <li><a href="#">Web Design</a></li>
+              <li><a href="#">UI Design</a></li>
+              <li><a href="#">Mobile App Design</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- /Right Sidebar Tags Label -->
+
+        <!-- Right Sidebar Profile Overview -->
+        @for (data of instructorEdit; track data) {
+          <div>
+            <div>
+              <h5>{{ data.heading }}</h5>
+              <div>
+                <div>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <span><span>{{ data.rating1 }}</span> {{ data.rating2 }}</span>
+                </div>
+                <div>
+                  <a href="#" (click)="toggleClass(data)"><i class="fa-heart" [ngClass]="data.active ? 'fa-solid' : 'fa-regular'"></i></a>
+                </div>
+              </div>
+              <div>
+                @for (data of instructorEditOverview; track data) {
+                  <div>
+                    <img [src]="data.img" alt="Courses">
+                    <div>
+                      <h5>{{ data.heading }}</h5>
+                      <p>{{ data.paragraph }}</p>
+                    </div>
+                  </div>
+                }
+              </div>
+            </div>
+          </div>
+        }
+        <!-- /Right Sidebar Profile Overview -->
+
+        <!-- Right Contact Details -->
+        <div>
+          <div>
+            <h5>Contact Details</h5>
+            <div>
+              @for (data of instructorEditContactDetails; track data) {
+                <div>
+                  <div><img [src]="data.img" alt="Address"></div>
+                  <div>
+                    <h6>{{ data.heading }}</h6>
+                    <p><a href="#">{{ data.paragraph }}</a></p>
+                  </div>
+                </div>
+              }
+            </div>
+          </div>
+        </div>
+        <!-- /Right Contact Details -->
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /Course Content -->

@@ -1,0 +1,92 @@
+<div class="stickybar">
+    <div class="settings-widget dash-profile">
+        <div class="settings-menu">
+            <div class="profile-bg">
+                <div class="profile-img">
+                    <a [routerLink]="routes.studentProfile"><img src="assets/img/user/user16.jpg" alt="img"></a>
+                </div>
+            </div>
+            <div class="profile-group">
+                <div class="profile-name text-center">
+                    <h4><a [routerLink]="routes.studentProfile">Rolands Richard</a></h4>
+                    <p>Student</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="settings-widget account-settings">
+        <div class="settings-menu">
+            <h3>Dashboard</h3>
+            <ul>
+                <li class="nav-item" routerLinkActive="active">
+                    <a [routerLink]="routes.studentDashboard" class="nav-link">
+                        <i class="bx bxs-tachometer"></i>Dashboard
+                    </a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a [routerLink]="routes.studentProfile" class="nav-link">
+                        <i class="bx bxs-user"></i>My Profile
+                    </a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a [routerLink]="routes.studentCourses" class="nav-link">
+                        <i class="bx bxs-graduation"></i>Enrolled Courses
+                    </a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a [routerLink]="routes.studentWishlist" class="nav-link">
+                        <i class="bx bxs-heart"></i>Wishlist
+                    </a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a [routerLink]="routes.studentReviews" class="nav-link">
+                        <i class="bx bxs-star"></i>Reviews
+                    </a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a [routerLink]="routes.studentsQuiz" class="nav-link">
+                        <i class="bx bxs-shapes"></i>My Quiz Attempts
+                    </a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a [routerLink]="routes.studentOrderHistory" class="nav-link">
+                        <i class="bx bxs-cart"></i>Order History
+                    </a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a [routerLink]="routes.studentsQA" class="nav-link">
+                        <i class="bx bxs-bookmark-alt"></i>Question & Answer
+                    </a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a [routerLink]="routes.students_referral" class="nav-link">
+                        <i class="bx bxs-user-plus"></i>Referrals
+                    </a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a [routerLink]="routes.studentMessages" class="nav-link">
+                        <i class="bx bxs-chat"></i>Messages
+                    </a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a [routerLink]="routes.students_tickets" class="nav-link">
+                        <i class="bx bxs-coupon"></i>Support Tickets
+                    </a>
+                </li>
+            </ul>
+            <h3>Account Settings</h3>
+            <ul>
+                <li class="nav-item" [ngClass]="{'active': page === 'settings'}">
+                    <a [routerLink]="routes.studentSettings" class="nav-link ">
+                        <i class="bx bxs-cog"></i>Settings
+                    </a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a [routerLink]="routes.home" class="nav-link">
+                        <i class="bx bxs-log-out"></i>Logout
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

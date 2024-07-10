@@ -1,0 +1,229 @@
+<!-- Page Content -->
+<div>
+    <div>
+        <div>
+
+            <!-- sidebar -->
+            <app-instructor-sidebar></app-instructor-sidebar>
+            <!-- /Sidebar -->
+
+            <!-- Instructor Quiz -->
+            <div>
+
+                <div>
+                    <div>
+                        <div>
+                            <h3>Quiz Attempts</h3>
+                        </div>
+                        <div>
+                            <div>
+                                <div>
+                                    <div>
+                                        <div>
+                                            <label for="corses">Courses</label>
+                                            <mat-select placeholder="All">
+                                                <mat-option value="All">All</mat-option>
+                                                <mat-option value="Javascript Course">Javascript Course</mat-option>
+                                                <mat-option value="Fullstack Web Developer">Fullstack Web Developer</mat-option>
+                                                <mat-option value="UI/UX Design">UI/UX Design</mat-option>
+                                            </mat-select>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <label for="sort">Sort By</label>
+                                            <mat-select placeholder="Ascending">
+                                                <mat-option value="Ascending">Ascending</mat-option>
+                                                <mat-option value="Descending">Descending</mat-option>
+                                            </mat-select>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <label for="created-date">Created Date</label>
+                                            <div>
+                                                <span>
+                                                    <i></i>
+                                                </span>
+                                                <input type="text" bsDatepicker>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+
+                                <!-- Referred Users-->
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Quiz Info</th>
+                                            <th>Question</th>
+                                            <th>Total Marks</th>
+                                            <th>Correct Answers</th>
+                                            <th>Incorrect Answers</th>
+                                            <th>Earned Marks</th>
+                                            <th>Result</th>
+                                            <th>Details</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div>
+                                                    <p>March 12, 2024 05:40 PM</p>
+                                                    <p>Quiz <i></i></p>
+                                                    <p><span>Student</span> : studentdemo </p>
+                                                </div>
+                                            </td>
+                                            <td>2</td>
+                                            <td>2</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1(50%)</td>
+                                            <td>Fail</td>
+                                            <td>
+                                                <a [routerLink]="routes.studentQuizDetails">Details</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div>
+                                                    <p>March 05, 2024 04:15 PM</p>
+                                                    <p>Quiz <i></i></p>
+                                                    <p><span>Student</span> : studentdemo </p>
+                                                </div>
+                                            </td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>2</td>
+                                            <td>1</td>
+                                            <td>2(67%)</td>
+                                            <td>Fail</td>
+                                            <td>
+                                                <div>
+                                                    <a [routerLink]="routes.instructorQuizAttemptsDetails">Details</a>
+                                                    <span><i></i></span>
+                                                </div>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div>
+                                                    <p>February 27, 2024 03:20 PM</p>
+                                                    <p>Quiz <i></i></p>
+                                                    <p><span>Student</span> : studentdemo </p>
+                                                </div>
+                                            </td>
+                                            <td>5</td>
+                                            <td>5</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                            <td>2(40%)</td>
+                                            <td>Fail</td>
+                                            <td>
+                                                <div>
+                                                    <a [routerLink]="routes.instructorQuizAttemptsDetails">Details</a>
+                                                    <span><i></i></span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div>
+                                                    <p>February 16, 2024 02:40 PM</p>
+                                                    <p>Quiz <i></i></p>
+                                                    <p><span>Student</span> : studentdemo </p>
+                                                </div>
+                                            </td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>0</td>
+                                            <td>3(100%)</td>
+                                            <td>Pass</td>
+                                            <td>
+                                                <div>
+                                                    <a [routerLink]="routes.instructorQuizAttemptsDetails">Details</a>
+                                                    <span><i></i></span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div>
+                                                    <p>January 19, 2024 11:00 AM</p>
+                                                    <p>Quiz <i></i></p>
+                                                    <p><span>Student</span> : studentdemo </p>
+                                                </div>
+                                            </td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>0</td>
+                                            <td>3</td>
+                                            <td>0(0%)</td>
+                                            <td>Fail</td>
+                                            <td>
+                                                <div>
+                                                    <a [routerLink]="routes.instructorQuizAttemptsDetails">Details</a>
+                                                    <span><i></i></span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div>
+                                                    <p>January 08, 2024 09:30 AM</p>
+                                                    <p>Quiz <i></i></p>
+                                                    <p><span>Student</span> : studentdemo </p>
+                                                </div>
+                                            </td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>1(33%)</td>
+                                            <td>Fail</td>
+                                            <td>
+                                                <div>
+                                                    <a [routerLink]="routes.instructorQuizAttemptsDetails">Details</a>
+                                                    <span><i></i></span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div>
+                        <div>
+                            <p>Page 1 of 2</p>
+                        </div>
+                        <div>
+                            <ul>
+                                <li class="active">
+                                    <a href="javascript:void(0);">1</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">2</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);"><i></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /Instructor Quiz -->
+
+        </div>
+    </div>
+</div>
+<!-- /Page Content -->

@@ -1,0 +1,63 @@
+<div class="error-box">
+  <div class="error-logo">
+    <a [routerLink]="routes.home">
+      <img src="assets/img/logo.svg" class="img-fluid" alt="Logo" />
+    </a>
+  </div>
+  <h4>WE ARE COMING SOON!!</h4>
+  <h6 class="font-weight-normal">Stay tuned for something amazing</h6>
+  <div class="countdown-container">
+    <div class="countdown-el days-c">
+      <p class="big-text" id="days">{{ getDataDiff().day }}</p>
+      <span>Days</span>
+    </div>
+    <div class="countdown-el hours-c">
+      <p class="big-text" id="hours">{{ getDataDiff().hour }}</p>
+      <span>hrs</span>
+    </div>
+    <div class="countdown-el mins-c">
+      <p class="big-text" id="mins">{{ getDataDiff().minute }}</p>
+      <span>mins</span>
+    </div>
+  </div>
+  <div class="error-box-img">
+    <img src="assets/img/come-soon.png" alt="" class="img-fluid" />
+  </div>
+  <div class="come-soon-box">
+    <h5 class="h4 font-weight-normal">
+      Subscribe to our mailing list to get latest updates
+    </h5>
+    <div class="subscribe-soon">
+      <form>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Email" />
+          <button class="btn btn-danger" type="button">Subscribe</button>
+        </div>
+      </form>
+    </div>
+    <div class="social-icon-soon">
+      <ul>
+        <li>
+          <a href="javascript:void(0)"
+            ><i class="fa-brands fa-facebook face-book"></i
+          ></a>
+        </li>
+        <li>
+          <a href="javascript:void(0)"
+            ><i class="fa-brands fa-twitter twit-ter"></i
+          ></a>
+        </li>
+        <li>
+          <a href="javascript:void(0)"
+            ><i class="fa-brands fa-instagram insta-gram"></i
+          ></a>
+        </li>
+        <li>
+          <a href="javascript:void(0)"
+            ><i class="fa-brands fa-linkedin linked-in"></i
+          ></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

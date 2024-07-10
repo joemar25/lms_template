@@ -1,0 +1,85 @@
+<!-- Breadcrumb -->
+<div class="breadcrumb-bar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-12">
+        <div class="breadcrumb-list">
+          <nav aria-label="breadcrumb" class="page-breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a [routerLink]="routes.home">Home</a></li>
+              <li class="breadcrumb-item" aria-current="page">Pages</li>
+              <li class="breadcrumb-item" aria-current="page">Wishlists</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /Breadcrumb -->
+
+<!-- Pricing Plan -->
+<section class="course-content">
+  <div class="container">
+
+
+    <div class="card wish-card">
+      <div class="card-header">
+        <h5>Your Wishlist (03 items)</h5>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-12">
+            @for (data of wishlist; track data) {
+              <div class="wishlist-item">
+                <div class="row align-items-center">
+                  <div class="col-md-9">
+                    <div class="wishlist-detail">
+                      <div class="wishlist-img">
+                        <a [routerLink]="routes.page_course_details">
+                          <img alt="" [src]="data.img">
+                        </a>
+                        <div class="price-amt">
+                          <h4>{{data.price}}</h4>
+                        </div>
+                      </div>
+                      <div class="wishlist-info">
+                        <h5><a [routerLink]="routes.page_course_details">{{data.content1}}</a></h5>
+                        <div class="course-info d-flex align-items-center border-bottom-0 pb-0">
+                          <div class="rating-img d-flex align-items-center">
+                            <img src="assets/img/icon/icon-01.svg" alt="">
+                            <p>{{data.lesson}}</p>
+                          </div>
+                          <div class="course-view d-flex align-items-center">
+                            <img src="assets/img/icon/icon-02.svg" alt="">
+                            <p>{{data.time}}</p>
+                          </div>
+                        </div>
+                        <div class="rating">
+                          <i class="fas fa-star filled me-1"></i>
+                          <i class="fas fa-star filled me-1"></i>
+                          <i class="fas fa-star filled me-1"></i>
+                          <i class="fas fa-star filled me-1"></i>
+                          <i class="fas fa-star me-1"></i>
+                          <span class="d-inline-block average-rating"><span>{{data.rating1}}</span> {{data.rating2}}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="remove-btn">
+                      <a href="javascript:void(0)" class="btn">{{data.content2}}</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            }
+          </div>
+        </div>
+        <!-- /Plan Type -->
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /Pricing Plan -->

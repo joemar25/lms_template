@@ -1,0 +1,108 @@
+<!-- Main Wrapper -->
+<div>
+  <div>
+
+    <!-- Login Banner -->
+    <!-- <div>
+      <owl-carousel-o [options]="registerTwoOwlOptions">
+        @for (slide of registerTwo; track slide) {
+        <ng-template carouselSlide>
+          <div>
+            <img [src]="slide.img" alt="Logo" />
+            <h2>{{ slide.content1 }} <br />{{ slide.content2 }}</h2>
+            <p>{{ slide.paragraph }}</p>
+          </div>
+        </ng-template>
+        }
+        @empty {
+        <p>No slides available.</p>
+        }
+      </owl-carousel-o>
+    </div> -->
+    <!-- /Login Banner -->
+
+    <div>
+
+      <!-- Login -->
+      <div>
+        <img src="assets/img/logo.svg" alt="Logo" />
+        <a [routerLink]="routes.login">Back to Home</a>
+        <h1>Become An Instructor</h1>
+        <div>
+          <div>
+            <div>
+              <div>
+                <span>50%</span>
+                <span>2 of 4</span>
+              </div>
+              <circle-progress [percent]="50" [clockwise]="true" innerStrokeColor="#e7e8ea"
+                outerStrokeColor="#159F46"></circle-progress>
+              <h3>Profile Completion</h3>
+              <div>
+                <span><i class="fa-solid fa-check"></i></span>
+                <div>
+                  <h4>Personal Details</h4>
+                  <p>Setup Your personal details</p>
+                </div>
+              </div>
+              <div>
+                <span>2</span>
+                <div>
+                  <h4>Social Profiles</h4>
+                  <p>Setup Your Social Profiles links</p>
+                </div>
+              </div>
+              <div>
+                <span>3</span>
+                <div>
+                  <h4>Profile Privacy Settings</h4>
+                  <p>Setup Your Profile Privacy Settings</p>
+                </div>
+              </div>
+              <div>
+                <span>4</span>
+                <div>
+                  <h4>Link Accounts</h4>
+                  <p>Setup Your Linked Accounts</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div>
+              <h4>Social Profiles</h4>
+              <div>
+                <label for="twitter">Twitter</label>
+                <input type="text" placeholder="Twitter Profile URL">
+              </div>
+              <div>
+                <label for="facebook">Facebook</label>
+                <input type="text" placeholder="Facebook Profile URL">
+              </div>
+              <div>
+                <label for="instagram">Instagram</label>
+                <input type="text" placeholder="Instagram Profile URL">
+              </div>
+              <div>
+                <label for="linkedin">LinkedIn</label>
+                <input type="text" placeholder="LinkedIn Profile URL">
+              </div>
+              <div>
+                <label for="youtube">YouTube</label>
+                <input type="text" placeholder="YouTube URL">
+              </div>
+              <div>
+                <a [routerLink]="routes.register1">Back</a>
+                <button (click)="directPath()">Next</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /Login -->
+
+    </div>
+
+  </div>
+</div>
+<!-- /Main Wrapper -->

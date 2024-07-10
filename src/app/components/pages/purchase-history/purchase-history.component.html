@@ -1,0 +1,102 @@
+<!-- Student Header -->
+<div class="course-student-header">
+  <div class="container">
+    <div class="student-group">
+      <div class="course-group ">
+        <div class="course-group-img d-flex">
+          <a [routerLink]="routes.students_profile"><img src="assets/img/user/user11.jpg" alt="" class="img-fluid"></a>
+          <div class="d-flex align-items-center">
+            <div class="course-name">
+              <h4><a [routerLink]="routes.students_profile">Rolands R</a><span>Beginner</span></h4>
+              <p>Student</p>
+            </div>
+          </div>
+        </div>
+        <div class="course-share">
+          <a href="javascript:void(0)" class="btn btn-primary">Account Settings</a>
+        </div>
+      </div>
+    </div>
+    <div class="my-student-list">
+      <ul>
+        <li><a  [routerLink]="routes.course_student">Courses</a></li>
+        <li><a  [routerLink]="routes.page_course_course_wishlist">Wishlists</a></li>
+        <li><a [routerLink]="routes.page_course_message">Messages</a></li>
+        <li class="mb-0"><a class="active" [routerLink]="routes.page_purchase_history">Purchase history</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- /Student Header -->
+
+<!-- Purchase History -->
+<section class="course-content purchase-widget">
+  <div class="container">
+    <div class="student-widget">
+      <div class="student-widget-group">
+        <div class="row">
+          <div class="col-lg-12">
+
+            <div class="row">
+              @for (data of purchaseHistory; track data) {
+                <div class="col-lg-12 col-md-12 d-flex">
+                  <div class="course-box course-design list-course d-flex">
+                    <div class="product">
+                      <div class="product-img">
+                        <a [routerLink]="routes.page_course_details">
+                          <img class="img-fluid" alt="" [src]="data.img1">
+                        </a>
+                        <div class="price" [ngClass]="{ combo: data.idle === 'FREE' }">
+                          <h3>{{ data.idle }}</h3>
+                          <h3>
+                            {{ data.amount1 }}<span>{{ data.amount2 }}</span>
+                          </h3>
+                        </div>
+                      </div>
+                      <div class="product-content">
+                        <div class="head-course-title">
+                          <h3 class="title"><a [routerLink]="routes.page_course_details">{{data.content1}}<br> {{data.content2}}</a></h3>
+                          <div class="all-btn all-category d-flex align-items-center">
+                            <a [routerLink]="routes.view_invoice_student" class="btn btn-primary">{{data.content3}}</a>
+                          </div>
+                        </div>
+                        <div class="course-info d-flex align-items-center border-bottom-0 pb-0">
+                          <div class="rating-img d-flex align-items-center">
+                            <img [src]="data.img2" alt="">
+                            <p>{{data.lesson}}</p>
+                          </div>
+                          <div class="course-view d-flex align-items-center">
+                            <img [src]="data.img3" alt="">
+                            <p>{{data.time}}</p>
+                          </div>
+                        </div>
+                        <div class="rating">
+                          <i class="fas fa-star filled me-1"></i>
+                          <i class="fas fa-star filled me-1"></i>
+                          <i class="fas fa-star filled me-1"></i>
+                          <i class="fas fa-star filled me-1"></i>
+                          <i class="fas fa-star me-1"></i>
+                          <span class="d-inline-block average-rating"><span>{{data.rating1}}</span> {{data.rating2}}</span>
+                        </div>
+                        <div class="course-group d-flex mb-0">
+                          <div class="course-group-img d-flex">
+                            <a [routerLink]="routes.students_profile"><img [src]="data.img4" alt="" class="img-fluid"></a>
+                            <div class="course-name">
+                              <h4><a [routerLink]="routes.students_profile">{{data.name}}</a></h4>
+                              <p>{{data.role}}</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /Purchase History -->

@@ -1,0 +1,209 @@
+
+
+<!-- Page Content -->
+<div class="page-content">
+    <div class="container">
+        <div class="row">
+            
+            <!-- sidebar -->
+            <app-instructor-sidebar class="col-xl-3 col-lg-3 theiaStickySidebar"></app-instructor-sidebar>
+            <!-- /Sidebar -->
+            
+            
+
+       
+      <!-- /Sidebar -->
+
+      <!-- Instructor Quiz -->
+      <div class="col-xl-9 col-lg-9">
+        <div class="settings-widget card-details">
+          <div class="settings-menu p-0">
+            <div class="profile-heading">
+              <h3>Withdrawal</h3>
+            </div>
+            <div class="checkout-form">
+              <div class="withdrawel-head">
+                <div class="title-withdrawel">
+                  <span class="file-text-icon">
+                    <i class="bx bxs-wallet"></i>
+                  </span>
+                  <div class="info-withdraw">
+                    <h6>Current Balance</h6>
+                    <h5>You have <span>$486</span> ready to withdraw now</h5>
+                  </div>
+                </div>
+                <div class="add-announcement-btn">
+                  <a
+                    href="javascript:void(0);"
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#withdraw-request"
+                    >Withdrawal Request</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="settings-widget card-details">
+          <div class="settings-menu p-0">
+            <div class="profile-heading">
+              <h3>Withdrawal History</h3>
+            </div>
+            <div class="checkout-form">
+              <div class="table-responsive custom-table">
+                <!-- Referred Users-->
+                <table class="table table-nowrap mb-0">
+                  <thead>
+                    <tr>
+                      <th>Withdrawal Method</th>
+                      <th>Requested On</th>
+                      <th>Amount</th>
+                      <th>Status</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    @for (data of tableData; track data) {
+                    <tr>
+                      <td>
+                        <div class="payment-method-data">
+                          <span
+                            >
+                            <!-- <img
+                              src="assets/img/icon/paypal-icon.svg"
+                              alt="Img"
+                          /> -->
+                        </span>
+                          <div class="payment-name">
+                            {{ data.withdrawalMethod }} <br />
+                            te****t&#64;example.com
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        {{ data.requestedOn }} <br />
+                        {{ data.time }}
+                      </td>
+                      <td>
+                        {{ data.amount }}
+                      </td>
+                      <td>
+                        <span
+                          class="status-badge"
+                          [ngClass]="{'badge-soft-warning':data.status === 'Pending','badge-soft-danger': data.status === 'Cancelled','badge-soft-success':data.status === 'Success'}"
+                          >{{ data.status }}</span
+                        >
+                      </td>
+                      <td><i class="bx bx-info-circle"></i></td>
+                    </tr>
+                    }
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dash-pagination">
+          <div class="row align-items-center">
+            <div class="col-6">
+              <p>Page 1 of 2</p>
+            </div>
+            <div class="col-6">
+              <ul class="pagination">
+                <li class="active">
+                  <a href="javascript:void(0);">1</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">2</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><i class="bx bx-chevron-right"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /Instructor Quiz -->
+  </div>
+<!-- /Page Content -->
+<div class="modal fade" id="withdraw-request">
+  <div class="modal-dialog modal-dialog-centered withdraw-modal">
+    <div class="modal-content">
+      <div class="page-wrapper-new p-0">
+        <div class="content">
+          <div class="modal-header border-0 custom-modal-header">
+            <div class="page-title">
+              <h4>Withdrawal Request</h4>
+            </div>
+            <button
+              type="button"
+              class="close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="feather icon-x"></i>
+            </button>
+          </div>
+          <div class="modal-body custom-modal-body">
+            <form>
+              <div class="withdraw-request-info">
+                <div class="settings-inner-blk add-course-info p-0">
+                  <p>
+                    Please check your transaction notification on your connected
+                    withdrawal method
+                  </p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="info-request">
+                        <span>Withdrawal Balance</span>
+                        <h6>$486</h6>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="info-request">
+                        <span>Selected </span>
+                        <h6>Paypal</h6>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="input-block">
+                        <label class="form-label" for="amount">Amount</label>
+                        <input
+                          type="number"
+                          class="form-control"
+                          placeholder="$"
+                        />
+                      </div>
+                    </div>
+                    <div class="co-md-12">
+                      <p class="info-text-withdraw">
+                        <i class="bx bx-info-circle me-2"></i>Minimum withdraw
+                        amount is $80
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer-btn">
+                <button type="submit" class="btn btn-primary">
+                  Submit Request
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-primary"
+                  data-bs-dismiss="modal"
+                >
+                  Cancel
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

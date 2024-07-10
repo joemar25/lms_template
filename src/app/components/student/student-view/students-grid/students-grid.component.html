@@ -1,0 +1,103 @@
+<!-- Breadcrumb -->
+<div class="breadcrumb-bar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-12">
+        <div class="breadcrumb-list">
+          <nav aria-label="breadcrumb" class="page-breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a [routerLink]="routes.home">Home</a></li>
+              <li class="breadcrumb-item">Pages</li>
+              <li class="breadcrumb-item">Students Grid</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /Breadcrumb -->
+
+<!-- Page Wrapper -->
+<div class="page-content">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+
+        <!-- Filter -->
+        <div class="showing-list">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="d-flex align-items-center">
+                <div class="view-icons">
+                  <a [routerLink]="routes.students_grid" class="grid-view active"><i class="feather icon-grid"></i></a>
+                  <a [routerLink]="routes.students_list" class="list-view"><i class="feather icon-list"></i></a>
+                </div>
+                <div class="show-result">
+                  <h4>Showing 1-9 of 50 results</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /Filter -->
+
+        <div class="row">
+          @for (data of studentGrid1; track data) {
+            <div class="col-lg-3 col-md-6 d-flex">
+              <div class="student-box flex-fill">
+                <div class="student-img">
+                  <a [routerLink]="routes.students_profile">
+                    <img class="img-fluid" alt="Students Info" [src]="data.img1">
+                  </a>
+                </div>
+                <div class="student-content pb-0">
+                  <h5><a [routerLink]="routes.students_profile">{{data.name}}</a></h5>
+                  <h6>{{data.role}}</h6>
+                  <div class="loc-blk d-flex align-items-center justify-content-center">
+                    <img [src]="data.img2" class="me-1" alt="">
+                    <p>{{data.place}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          }
+        </div>
+
+        <!-- /pagination -->
+        <div class="row">
+          <div class="col-md-12">
+            <ul class="pagination lms-page">
+              <li class="page-item prev">
+                <a class="page-link" href="javascript:void(0)" tabindex="-1"><i class="fas fa-angle-left"></i></a>
+              </li>
+              <li class="page-item first-page active">
+                <a class="page-link" href="javascript:void(0)">1</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="javascript:void(0)">2</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="javascript:void(0)">3</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="javascript:void(0)">4</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="javascript:void(0)">5</a>
+              </li>
+              <li class="page-item next">
+                <a class="page-link" href="javascript:void(0)"><i class="fas fa-angle-right"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- /pagination -->
+
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- /Page Wrapper -->

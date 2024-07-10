@@ -1,0 +1,125 @@
+<!-- Page Content -->
+<div class="page-content">
+    <div class="container">
+        <div class="row">
+            
+            <!-- sidebar -->
+            <app-student-sidebar class="col-xl-3 col-lg-3 theiaStickySidebar"></app-student-sidebar>
+            <!-- /Sidebar -->
+            
+            <!-- Instructor Settings -->
+            <div class="col-xl-9 col-lg-9">	
+
+                <div class="settings-widget card-details">
+                    <div class="settings-menu p-0">
+                        <div class="profile-heading">
+                            <h3>Settings</h3>
+                            <p>You have full control to manage your own account settings</p>
+                        </div>
+                        <app-instructor-setting-tab></app-instructor-setting-tab>
+                        <form>
+                            <div class="checkout-form settings-wrap pb-0">
+                                <div class="edit-profile-info">
+                                    <h5>Select a withdraw method</h5>
+                                </div>
+                                <ul class="nav nav-pills d-block" id="pills-tab1" role="tablist">
+                                    <li class="wallet-method withdraw-box" role="presentation">
+                                        <label class="custom_radio mb-0" id="pills-public-tab" data-bs-toggle="pill" data-bs-target="#pills-public"  role="tab" aria-controls="pills-public" aria-selected="true">
+                                        <input type="radio"  name="public">
+                                        <span class="checkmark"></span> Bank Transfer</label>
+                                        <p class="mb-0">Minimum withdraw $80</p>
+                                    </li>
+                                    <li class="wallet-method withdraw-box" role="presentation">
+                                        <label  class="custom_radio mb-0" id="pills-private-tab" data-bs-toggle="pill" data-bs-target="#pills-private"  role="tab" aria-controls="pills-private" aria-selected="false">
+                                        <input type="radio" name="public">
+                                        <span class="checkmark"></span> E-Check</label>
+                                        <p class="mb-0">Minimum withdraw $80</p>
+                                    </li>
+                                    <li class="wallet-method withdraw-box" role="presentation">
+                                        <label  class="custom_radio mb-0 active" id="pills-select-people-tab" data-bs-toggle="pill" data-bs-target="#pills-select-people"  role="tab" aria-controls="pills-select-people" aria-selected="false">
+                                        <input type="radio" name="public" checked>
+                                        <span class="checkmark"></span> PayPal</label>
+                                        <p class="mb-0">Minimum withdraw $80</p>
+                                    </li>
+                                </ul>	
+                                <div class="wrap-wallet">
+                                    <div class="tab-content" id="pills-tabContent">
+                                        <div class="tab-pane fade" id="pills-public" role="tabpanel" aria-labelledby="pills-public-tab">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="input-block">
+                                                        <label class="form-label" for="account-name">Account Name</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="input-block">
+                                                        <label class="form-label" for="account-number">Account Number</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="input-block">
+                                                        <label class="form-label" for="bank-name">Bank Name</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>		
+                                                <div class="col-md-6">
+                                                    <div class="input-block">
+                                                        <label class="form-label" for="iban">IBAN</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>		
+                                                <div class="col-md-6">
+                                                    <div class="input-block">
+                                                        <label class="form-label" for="swift">BIC / SWIFT</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>										
+                                                <div class="col-md-12">
+                                                    <button class="btn btn-primary" type="submit">Save Withdrawal Account</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="pills-private" role="tabpanel" aria-labelledby="pills-private-tab">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="input-block">
+                                                        <label class="form-label" for="physical-address">Your Physical Address</label>
+                                                        <input type="text" class="form-control">
+                                                        <p class="label-slug">We will send you an E-Check to this address directly</p>
+                                                    </div>
+                                                </div>							
+                                                <div class="col-md-12">
+                                                    <button class="btn btn-primary" type="submit">Save Withdrawal Account</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade show active" id="pills-select-people" role="tabpanel" aria-labelledby="pills-select-people-tab">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="input-block">
+                                                        <input type="text" class="form-control" value="test@example.com">
+                                                        <p class="label-slug">We will use this email address to send the money to your Paypal account</p>
+                                                        <label class="form-label" for="paypal-email">PayPal Email Address</label>
+                                                    </div>
+                                                </div>							
+                                                <div class="col-md-12">
+                                                    <button class="btn btn-primary" type="submit">Save Withdrawal Account</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </form>								
+                    </div>
+                </div>
+            </div>	
+            <!-- /Instructor Settings -->
+            
+        </div>
+    </div>
+</div>	
+<!-- /Page Content -->

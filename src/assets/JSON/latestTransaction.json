@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "referredId": "K2WX7JJ6R1UA",
+      "details": "10 USD Refunded from withdrawal rejection ",
+      "amount": "+ $45.00",
+      "postBalance": "$45.00"
+    },
+    {
+      "referredId": "9RVE1N1TA1H3",
+      "details": "Deposit Via Stripe Hosted - USD ",
+      "amount": "+ $75.00",
+      "postBalance": "$75.00"
+    },
+    {
+      "referredId": "C83Z7EQ4A1WX",
+      "details": "Deposit Via Stripe Hosted - USD  ",
+      "amount": "+ $100.00",
+      "postBalance": "$100.00"
+    },
+    {
+      "referredId": "1C6A5M4YPV39",
+      "details": "Withdraw Via Bank withdrawal ",
+      "status": "negative",
+      "amount": "- $5.00",
+      "postBalance": "$5.00"
+    },
+    {
+      "referredId": "K2WX7JJ6R1UA",
+      "details": "10 USD Refunded from withdrawal rejection ",
+      "status": "negative",
+      "amount": "- $25.00",
+      "postBalance": "$25.00"
+    },
+    {
+      "referredId": "KSM5CW4EOEGQ",
+      "details": "Added Balance Via Admin  ",
+      "amount": "+ $160.00",
+      "postBalance": "S160.00"
+    },
+    {
+      "referredId": "K2WX7JJ6R1UA",
+      "details": "10 USD Refunded from withdrawal rejection ",
+      "amount": "+ $150.00",
+      "postBalance": " $150.00"
+    },
+    {
+      "referredId": "9RVE1N1TA1H3",
+      "details": "Deposit Via Stripe Hosted - USD  ",
+      "amount": "+ $45.00",
+      "postBalance": "$45.00"
+    },
+    {
+      "referredId": "C83Z7EQ4A1WX",
+      "details": "Deposit Via Stripe Hosted - USD  ",
+      "amount": "+ $10.00",
+      "postBalance": "$10.00"
+    },
+    {
+      "referredId": "1C6A5M4YPV39",
+      "details": "Withdraw Via Bank withdrawal ",
+      "status": "negative",
+      "amount": "- $10.00",
+      "postBalance": "$10.00"
+    }
+  ],
+  "totalData": 10
+}

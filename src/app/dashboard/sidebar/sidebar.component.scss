@@ -1,0 +1,28 @@
+.cursor-pointer {
+    cursor: pointer;
+  }
+  
+  .expanded {
+    transform: rotate(180deg);
+  }
+  
+  .active-link {
+    background-color: #f0f0f0;
+    font-weight: bold;
+  }
+  
+
+  aside {
+    .nav-item {
+      &.active {
+        background-color: #f472b6; // pink-400
+        color: white;
+      }
+  
+      &:hover {
+        background-color: #f472b6; // pink-400
+        color: white;
+      }
+    }
+  }
+  

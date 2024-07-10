@@ -1,0 +1,95 @@
+{
+  "data": [
+    {
+      "img1": "assets/img/user/user11.jpg",
+      "img2": "assets/img/icon/icon-01.svg",
+      "img3": "assets/img/icon/icon-02.svg",
+      "name": "Rolands R",
+      "role": "Instructor",
+      "time": "9hr 30min",
+      "rating1": "4.0",
+      "rating2": "(15)"
+    },
+    {
+      "img1": "assets/img/user/user.jpg",
+      "img2": "assets/img/icon/icon-01.svg",
+      "img3": "assets/img/icon/icon-02.svg",
+      "name": "Jenis R.",
+      "role": "Instructor",
+      "time": "9hr 30min",
+      "rating1": "4.0",
+      "rating2": "(15)"
+    },
+    {
+      "img1": "assets/img/user/user4.jpg",
+      "img2": "assets/img/icon/icon-01.svg",
+      "img3": "assets/img/icon/icon-02.svg",
+      "name": "Jesse Stevens",
+      "role": "Instructor",
+      "time": "9hr 30min",
+      "rating1": "4.0",
+      "rating2": "(15)"
+    },
+    {
+      "img1": "assets/img/user/user2.jpg",
+      "img2": "assets/img/icon/icon-01.svg",
+      "img3": "assets/img/icon/icon-02.svg",
+      "name": "Stevens Jes",
+      "role": "Instructor",
+      "time": "9hr 30min",
+      "rating1": "4.0",
+      "rating2": "(15)"
+    },
+    {
+      "img1": "assets/img/user/user3.jpg",
+      "img2": "assets/img/icon/icon-01.svg",
+      "img3": "assets/img/icon/icon-02.svg",
+      "name": "John Smith",
+      "role": "Instructor",
+      "time": "9hr 30min",
+      "rating1": "4.0",
+      "rating2": "(15)"
+    },
+    {
+      "img1": "assets/img/user/user5.jpg",
+      "img2": "assets/img/icon/icon-01.svg",
+      "img3": "assets/img/icon/icon-02.svg",
+      "name": "Stella Johnson",
+      "role": "Instructor",
+      "time": "9hr 30min",
+      "rating1": "4.0",
+      "rating2": "(15)"
+    },
+    {
+      "img1": "assets/img/user/user12.jpg",
+      "img2": "assets/img/icon/icon-01.svg",
+      "img3": "assets/img/icon/icon-02.svg",
+      "name": "John Micheal",
+      "role": "Instructor",
+      "time": "9hr 30min",
+      "rating1": "4.0",
+      "rating2": "(15)"
+    },
+    {
+      "img1": "assets/img/user/user1.jpg",
+      "img2": "assets/img/icon/icon-01.svg",
+      "img3": "assets/img/icon/icon-02.svg",
+      "name": "Nicole Brown",
+      "role": "Instructor",
+      "time": "9hr 30min",
+      "rating1": "4.0",
+      "rating2": "(15)"
+    },
+    {
+      "img1": "assets/img/user/user13.jpg",
+      "img2": "assets/img/icon/icon-01.svg",
+      "img3": "assets/img/icon/icon-02.svg",
+      "name": "Monroe Parker",
+      "role": "Instructor",
+      "time": "9hr 30min",
+      "rating1": "4.0",
+      "rating2": "(15)"
+    }
+  ],
+  "totalData": 9
+}

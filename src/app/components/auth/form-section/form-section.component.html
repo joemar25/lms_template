@@ -1,0 +1,13 @@
+<div class="form-section">
+  <h3>{{ sectionTitle }}</h3>
+  <ng-container *ngFor="let field of fields">
+    <app-input-field
+      [label]="field.label"
+      [placeholder]="field.placeholder"
+      [(value)]="field.value"
+      [type]="field.type"
+      [id]="field.id"
+    >
+    </app-input-field>
+  </ng-container>
+</div>

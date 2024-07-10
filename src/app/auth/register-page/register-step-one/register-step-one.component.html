@@ -1,0 +1,113 @@
+<!-- Main Wrapper -->
+<div>
+
+  <!-- Login Banner -->
+  <!-- <owl-carousel-o [options]="registerOneOwlOptions">
+    @for (slide of registerOne; track slide) {
+    <ng-template carouselSlide>
+      <img [src]="slide.img" alt="Logo">
+      <h2>{{ slide.content1 }} <br>{{ slide.content2 }}</h2>
+      <p>{{ slide.paragraph }}</p>
+    </ng-template>
+    }
+    @empty {
+    <p>No slides available.</p>
+    }
+  </owl-carousel-o> -->
+  <!-- /Login Banner -->
+
+  <!-- Login -->
+  <!-- <img src="assets/img/logo.svg" alt="Logo"> -->
+  <a [routerLink]="routes.login">Back to Home</a>
+  <h1>Become An Instructor</h1>
+
+  <div>
+    <h3>Profile Completion</h3>
+    <div>
+      <span>25%</span>
+      <span>1 of 4</span>
+      <circle-progress [percent]="25" [clockwise]="true" innerStrokeColor="#e7e8ea"
+        outerStrokeColor="#159F46"></circle-progress>
+    </div>
+
+    <div>
+      <i class="fa-solid fa-check"></i>
+      <div>
+        <h4>Personal Details</h4>
+        <p>Setup Your personal details</p>
+      </div>
+    </div>
+
+    <div>
+      <span>2</span>
+      <div>
+        <h4>Social Profiles</h4>
+        <p>Setup Your Social Profiles links</p>
+      </div>
+    </div>
+
+    <div>
+      <span>3</span>
+      <div>
+        <h4>Profile Privacy Settings</h4>
+        <p>Setup Your Profile Privacy Settings</p>
+      </div>
+    </div>
+
+    <div>
+      <span>4</span>
+      <div>
+        <h4>Link Accounts</h4>
+        <p>Setup Your Linked Accounts</p>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <h4>Personal Details</h4>
+    <div>
+      <label for="first-name">First Name</label>
+      <input type="text" placeholder="Enter your first name">
+
+      <label for="last-name">Last Name</label>
+      <input type="text" placeholder="Enter your last name">
+
+      <label for="email">Email</label>
+      <input type="email" placeholder="Enter your email address">
+
+      <label for="phone">Phone</label>
+      <input type="text" placeholder="Enter your phone number">
+
+      <label for="website">Website</label>
+      <input type="text" placeholder="Enter your website URL">
+
+      <label for="sel1">Country</label>
+      <mat-select id="sel1" name="sellist1" placeholder="Select country">
+        <mat-option value="India">India</mat-option>
+        <mat-option value="America">America</mat-option>
+        <mat-option value="London">London</mat-option>
+      </mat-select>
+
+      <label for="address-line1">Address Line1</label>
+      <input type="text" placeholder="Address Line1">
+
+      <label for="address-line2">Address Line2</label>
+      <input type="text" placeholder="Address Line2">
+
+      <label for="city">City</label>
+      <input type="text" placeholder="Enter your city">
+
+      <label for="zipcode">ZipCode</label>
+      <input type="text" placeholder="Enter your zipcode">
+
+      <label>
+        <input type="checkbox" checked>
+        Use same address for Billing.
+      </label>
+      <button class="btn btn-primary btn-start" type="submit" (click)="registerPath()">Next</button>
+    </div>
+  </div>
+  <!-- /Login -->
+
+</div>
+<!-- /Main Wrapper -->

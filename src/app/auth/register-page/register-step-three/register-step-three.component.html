@@ -1,0 +1,139 @@
+<!-- Main Wrapper -->
+<div class="main-wrapper">
+  <div class="row">
+    <!-- Login Banner -->
+    <!-- <div class="col-lg-4 col-md-6 login-bg">
+      <div class="row w-100">
+        <div class="col-md-12">
+          <owl-carousel-o [options]="registerThreeOwlOptions">
+            @for (slide of registerThree; track slide) {
+            <ng-template carouselSlide>
+              <div class="welcome-login register-step">
+                <div class="login-banner">
+                  <img [src]="slide.img" class="img-fluid" alt="Logo" />
+                </div>
+                <div class="mentor-course text-center">
+                  <h2>{{ slide.content1 }} <br />{{ slide.content2 }}</h2>
+                  <p>{{ slide.paragraph }}</p>
+                </div>
+              </div>
+            </ng-template>
+            }
+            @empty {
+            <p>No slides available.</p>
+            }
+          </owl-carousel-o>
+        </div>
+      </div>
+    </div> -->
+    <!-- /Login Banner -->
+
+    <div class="col-lg-8 col-md-6 login-wrap-bg">
+      <!-- Login -->
+      <div class="login-wrapper">
+        <div class="loginbox register-box">
+          <div class="img-logo">
+            <img src="assets/img/logo.svg" class="img-fluid" alt="Logo" />
+            <div class="back-home">
+              <a [routerLink]="routes.login">Back to Home</a>
+            </div>
+          </div>
+          <h1>Become An Instructor</h1>
+          <div class="row">
+            <div class="col-lg-5">
+              <div class="profile-box">
+                <div class="circle-progressbar">
+                  <div class="circle-progress-percent">75%</div>
+                  <div class="circle-progress-text">3 of 4</div>
+                </div>
+                <circle-progress class="circle-progress-bar" [percent]="75" [clockwise]="true"
+                  innerStrokeColor="#e7e8ea" outerStrokeColor="#159F46"></circle-progress>
+                <h3>Profile Completion</h3>
+                <div class="personal-detail d-flex align-items-center">
+                  <span class="active-color"><i class="fa-solid fa-check"></i></span>
+                  <div class="personal-text">
+                    <h4>Personal Details</h4>
+                    <p class="mb-0">Setup Your personal details</p>
+                  </div>
+                </div>
+                <div class="personal-detail d-flex align-items-center">
+                  <span class="active-color"><i class="fa-solid fa-check"></i></span>
+                  <div class="personal-text">
+                    <h4>Social Profiles</h4>
+                    <p class="mb-0">Setup Your Social Profiles links</p>
+                  </div>
+                </div>
+                <div class="personal-detail d-flex align-items-center">
+                  <span class="active-color active-bar">3</span>
+                  <div class="personal-text">
+                    <h4>Profile Privacy Settings</h4>
+                    <p class="mb-0">Setup Your Profile Privacy Settings</p>
+                  </div>
+                </div>
+                <div class="personal-detail d-flex align-items-center">
+                  <span>4</span>
+                  <div class="personal-text">
+                    <h4>Link Accounts</h4>
+                    <p class="mb-0">Setup Your Linked Accounts</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-7">
+              <div class="personal-form">
+                <h4>Profile Privacy Settings</h4>
+                <div>
+                  <label for="privacy-levels">Privacy levels</label>
+                  <mat-select id="privacy-levels" name="privacyLevels" placeholder="Select privacy level">
+                    <mat-option value="public">Public</mat-option>
+                    <mat-option value="private">Private</mat-option>
+                    <mat-option value="custom">Custom</mat-option>
+                  </mat-select>
+
+                  <label for="profile-settings">Profile settings</label>
+                  <div>
+                    <label>
+                      <input type="checkbox" checked />
+                      Show your profile on search engines
+                    </label>
+                    <label>
+                      <input type="checkbox" />
+                      Show courses you're taking on your profile page
+                    </label>
+                    <label>
+                      <input type="checkbox" />
+                      Show your profile on public
+                    </label>
+                    <label>
+                      <input type="checkbox" />
+                      Currently learning
+                    </label>
+                    <label>
+                      <input type="checkbox" />
+                      Completed courses
+                    </label>
+                    <label>
+                      <input type="checkbox" />
+                      Your Interests
+                    </label>
+                  </div>
+
+                  <div class="btn-group d-flex">
+                    <div class="back-btn">
+                      <a [routerLink]="routes.register2" class="btn btn-back">Back</a>
+                    </div>
+                    <div class="next-btn">
+                      <button class="btn btn-primary btn-start" (click)="directPath()">Next</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /Login -->
+    </div>
+  </div>
+</div>
+<!-- /Main Wrapper -->

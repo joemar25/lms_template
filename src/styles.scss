@@ -1,0 +1,252 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use "@angular/material"as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$quanby-lms-primary: mat.define-palette(mat.$indigo-palette);
+$quanby-lms-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$quanby-lms-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$quanby-lms-theme: mat.define-light-theme((color: (primary: $quanby-lms-primary,
+      accent: $quanby-lms-accent,
+      warn: $quanby-lms-warn,
+    ),
+  ));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($quanby-lms-theme);
+
+@import "assets/css/style.css";
+@import 'primeng/resources/themes/saga-blue/theme.css';
+@import 'primeng/resources/primeng.min.css';
+
+* {
+  user-select: none;
+}
+
+.hide-dropdown {
+  display: none;
+}
+
+.show-dropdown {
+  display: block;
+}
+
+
+mat-option.mat-mdc-option mat-pseudo-checkbox {
+  display: none;
+}
+
+mat-option.mat-mdc-option.mdc-list-item--selected:not(.mdc-list-item--disabled):not(.mat-mdc-option-multiple) {
+  background-color: #ffdeda;
+  font-size: 14px;
+  min-height: 35px;
+}
+
+mat-option.mat-mdc-option span.mdc-list-item__primary-text {
+  font-size: 14px;
+  color: #22100d;
+}
+
+mat-option.mat-mdc-option.mdc-list-item--selected:not(.mdc-list-item--disabled) .mdc-list-item__primary-text {
+  color: inherit;
+}
+
+@media (max-width: 1399.98px) {
+  .come-soon-box h5 {
+    font-size: 16px;
+    margin: 25px 0px 25px;
+  }
+}
+
+.input-group span.drop-detail-five mat-select.custom-mat-select:focus {
+  box-shadow: none;
+}
+
+.home-four mat-option.mat-mdc-option.mdc-list-item--selected:not(.mdc-list-item--disabled):not(.mat-mdc-option-multiple) {
+  background-color: #FFD600;
+}
+
+.stickybar {
+  top: 0;
+  position: sticky;
+}
+
+td i.bx.bxs-adjust,
+td i.bx.bx-check-double {
+  margin-right: 5px;
+}
+
+div.cdk-overlay-container {
+  z-index: 10000000;
+}
+
+mat-select.custom-mat-select .mat-mdc-select-trigger {
+  border: 1px solid #e9ecef;
+  height: 44px;
+  border-radius: 4px;
+  font-size: 14px;
+  padding-left: 8px;
+  padding-right: 20px;
+}
+
+mat-option.mat-mdc-option.mdc-list-item {
+  min-height: 35px;
+}
+
+.social-icon-three ul li .feather.icon-facebook {
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease 0s;
+  background: #066AC9;
+  border-radius: 50%;
+}
+
+.social-icon-three ul li a {
+  display: inline-grid;
+}
+
+.social-icon-three ul li .feather.icon-twitter {
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease 0s;
+  background: #2BB7E5;
+  border-radius: 50%;
+}
+
+.social-icon-three ul li .feather.icon-linkedin {
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease 0s;
+  background: #066AC9;
+  border-radius: 50%;
+}
+
+.social-icon-three ul li .feather.icon-youtube:hover {
+  background: #7B1FFE;
+}
+
+.social-icon-three ul li .feather.icon-youtube {
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease 0s;
+  background: #FF2D20;
+  border-radius: 50%;
+}
+
+mat-select.custom-mat-select.home-one .mat-mdc-select-trigger {
+  height: 44px;
+  border-radius: 22px;
+  font-size: 14px;
+  padding-left: 8px;
+  padding-right: 20px;
+  background: #FFDEDA;
+}
+
+.home-three .drop-detail-three {
+  width: 164px;
+  display: flex;
+  margin: 0 17px;
+  border: 0;
+  height: 56px;
+  background: rgba(247, 247, 247, .968627451);
+  align-items: center;
+  text-align: center;
+  border-radius: 0px !important;
+  padding-right: 10px;
+}
+
+.select-home-three mat-option.mat-mdc-option.mdc-list-item--selected:not(.mdc-list-item--disabled):not(.mat-mdc-option-multiple) {
+  background-color: #7B1FFE;
+  font-size: 14px;
+  min-height: 35px;
+  color: #fff;
+}
+
+mat-select.custom-mat-select.select.home-four-select .mat-mdc-select-trigger {
+  border: none;
+}
+
+.select-home-four mat-option.mat-mdc-option.mdc-list-item--selected:not(.mdc-list-item--disabled):not(.mat-mdc-option-multiple) {
+  background-color: #FFD600;
+}
+
+bs-datepicker-container .theme-green .bs-datepicker-head,
+.bs-datepicker.theme-green .bs-datepicker-head {
+  background-color: #08c;
+}
+
+bs-datepicker-container .theme-green .bs-datepicker-body table td span.selected,
+bs-datepicker-container .theme-green .bs-datepicker-body table td.selected span,
+bs-datepicker-container .theme-green .bs-datepicker-body table td span[class*=select-]:after,
+bs-datepicker-container .theme-green .bs-datepicker-body table td[class*=select-] span:after,
+.bs-datepicker.theme-green .bs-datepicker-body table td span.selected,
+.bs-datepicker.theme-green .bs-datepicker-body table td.selected span,
+.bs-datepicker.theme-green .bs-datepicker-body table td span[class*=select-]:after,
+.bs-datepicker.theme-green .bs-datepicker-body table td[class*=select-] span:after {
+  background-color: #08c;
+}
+
+.theme-green .bs-datepicker-body table td.week span {
+  color: #08c;
+}
+
+.circle-progress-bar {
+  margin-left: 30px;
+  display: block;
+}
+
+.circle-progressbar {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 85px;
+  left: 100px;
+}
+
+.circle-progress-percent {
+  font-size: 23px;
+  color: #159f46;
+  font-weight: 700;
+  margin-left: -4px;
+}
+
+mat-select.custom-mat-select.home-one-select .mat-mdc-select-trigger {
+  background: #FFDEDA;
+  border-radius: 22px;
+}
+
+.dropdown-item.night-mode .feather.icon-moon {
+  color: #FF875A;
+}
+
+#chats.left-sidebar-wrap>div {
+  border: 1px solid #cdcdcd;
+  border-radius: 10px;
+}
+
+.become-instructors {
+  margin: 327px 0px 100px;
+}

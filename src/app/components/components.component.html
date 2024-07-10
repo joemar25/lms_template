@@ -1,0 +1,30 @@
+<div
+  class="main-wrapper"
+  [ngClass]="{
+    'menu-opened': showMiniSidebar === true,
+    'home-two': routeStatus === 'home-two',
+    'home-three': routeStatus === 'home-three',
+    'home-five': routeStatus === 'home-four',
+    'chat-wrapper': page === 'instructor-chat' || 'student-message',
+  }"
+  >
+  @if (isUserHeader === true) {
+    <app-header></app-header>
+  }
+
+  @if (isAdminHeader) {
+    <app-admin-header></app-admin-header>
+  }
+  @if (isStudentHeader === true) {
+    <app-student-header></app-student-header>
+  }
+  <div class="flex justify-center items-center h-screen">
+    <router-outlet></router-outlet>
+  </div>
+  
+  <!-- <div>
+    @if (mainFooter) {
+      <app-footer></app-footer>
+    }
+  </div>  -->
+</div>  

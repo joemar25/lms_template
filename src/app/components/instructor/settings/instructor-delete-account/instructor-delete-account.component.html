@@ -1,0 +1,40 @@
+<!-- Page Content -->
+<div class="page-content">
+    <div class="container">
+        <div class="row">
+
+            <!-- sidebar -->
+            <app-instructor-sidebar
+                class="col-xl-3 col-lg-3 theiaStickySidebar"></app-instructor-sidebar>
+            <!-- /Sidebar -->
+
+            <!-- Instructor Settings -->
+            <div class="col-xl-9 col-lg-9">
+
+                <div class="settings-widget card-details">
+                    <div class="settings-menu p-0">
+                        <div class="profile-heading">
+                            <h3>Settings</h3>
+                            <p>You have full control to manage your own account settings</p>
+                        </div>
+                        <app-instructor-setting-tab></app-instructor-setting-tab>
+                        <div class="checkout-form settings-wrap">
+                            <div class="edit-profile-info">
+                                <h5>Select a withdraw method</h5>
+                            </div>
+                            <div class="del-acc">
+                                <h6>Warning</h6>
+                                <p>If you close your account, you will be unsubscribed from all your 0 courses, and will
+                                    lose access forever.</p>
+                            </div>
+                            <a [routerLink] = "routes.home" class="btn btn-primary">Delete My Account</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Instructor Settings -->
+
+        </div>
+    </div>
+</div>
+<!-- /Page Content -->

@@ -1,0 +1,333 @@
+<!-- Breadcrumb -->
+<div class="breadcrumb-bar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-12">
+        <div class="breadcrumb-list">
+          <nav aria-label="breadcrumb" class="page-breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a [routerLink]="routes.home">Home</a></li>
+              <li class="breadcrumb-item" aria-current="page">Courses</li>
+              <li class="breadcrumb-item active" aria-current="page">All Courses</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /Breadcrumb -->
+
+<!-- Course -->
+<section class="course-content">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-9">
+
+        <!-- Filter -->
+        <div class="showing-list">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="d-flex align-items-center">
+                <div class="view-icons">
+                  <a [routerLink]="routes.page_course_grid" class="grid-view"><i class="feather icon-grid"></i></a>
+                  <a [routerLink]="routes.page_course_list" class="list-view active"><i class="feather icon-list"></i></a>
+                </div>
+                <div class="show-result">
+                  <h4>Showing {{ serialNumberArray[0] }}-{{ serialNumberArray[serialNumberArray.length - 1] }} of 50 results</h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="show-filter add-course-info mat-style">
+                <form action="#">
+                  <div class="row gx-2 align-items-center">
+                    <div class="col-md-6 col-item">
+                      <div class=" search-group">
+                        <i class="feather icon-search"></i>
+                        <input type="text"
+                          [(ngModel)]="searchDataValue"
+                          name="one"
+                          (ngModelChange)="searchData(searchDataValue)"
+                          class="form-control" placeholder="Search our courses" >
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-lg-6 col-item">
+                        <div class="input-block select-form mb-0">
+                          <mat-select class="custom-mat-select" name="sellist1"  [(value)]="selected">
+                            <mat-option value="1">Newly published</mat-option>
+                            <mat-option value="angular">Angular</mat-option>
+                            <mat-option value="nodejs">Node Js</mat-option>
+                            <mat-option value="react">React</mat-option>
+                          </mat-select>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /Filter -->
+
+          <div class="row">
+            @for (data of courseList; track data) {
+              <div class="col-lg-12 col-md-12 d-flex">
+                <div class="course-box course-design list-course d-flex">
+                  <div class="product">
+                    <div class="product-img">
+                      <a [routerLink]="routes.page_course_details">
+                        <img class="img-fluid" alt="" [src]="data.img1">
+                      </a>
+                      <div class="price">
+                        <h3>{{data.amount1}} <span>{{data.amount2}}</span></h3>
+                      </div>
+                    </div>
+                    <div class="product-content">
+                      <div class="head-course-title">
+                        <h3 class="title"><a [routerLink]="routes.page_course_details">{{data.content1}}</a></h3>
+                        <div class="all-btn all-category d-flex align-items-center">
+                          <a [routerLink]="routes.page_checkout" class="btn btn-primary">{{data.content2}}</a>
+                        </div>
+                      </div>
+                      <div class="course-info border-bottom-0 pb-0 d-flex align-items-center">
+                        <div class="rating-img d-flex align-items-center">
+                          <img [src]="data.img2" alt="">
+                          <p>{{data.lesson}}</p>
+                        </div>
+                        <div class="course-view d-flex align-items-center">
+                          <img [src]="data.img3" alt="">
+                          <p>{{data.time}}</p>
+                        </div>
+                      </div>
+                      <div class="rating">
+                        <i class="fas fa-star filled me-1"></i>
+                        <i class="fas fa-star filled me-1"></i>
+                        <i class="fas fa-star filled me-1"></i>
+                        <i class="fas fa-star filled me-1"></i>
+                        <i class="fas fa-star me-1"></i>
+                        <span class="d-inline-block average-rating"><span>{{data.rating1}}</span> {{data.rating2}}</span>
+                      </div>
+                      <div class="course-group d-flex mb-0">
+                        <div class="course-group-img d-flex">
+                          <a [routerLink]="routes.instructor_instructor_profile"><img [src]="data.img4" alt="" class="img-fluid"></a>
+                          <div class="course-name">
+                            <h4><a [routerLink]="routes.instructor_instructor_profile">{{data.name}}</a></h4>
+                            <p>{{data.role}}</p>
+                          </div>
+                        </div>
+                        <div class="course-share d-flex align-items-center justify-content-center">
+                          <a href="javascript:void(0)" (click)="toggleClass(data)"><i class="fa-heart"  [ngClass]="data.active ? 'fa-solid' : 'fa-regular'"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            }
+          </div>
+
+          <!-- /pagination -->
+          <div class="row">
+            <div class="col-md-12">
+              <ul class="pagination lms-page">
+                <li class="page-item prev">
+                  <a class="page-link" href="javascript:void(0)" tabindex="-1"><i class="fas fa-angle-left"></i></a>
+                </li>
+                <li class="page-item first-page active">
+                  <a class="page-link" href="javascript:void(0)">1</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="javascript:void(0)">2</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="javascript:void(0)">3</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="javascript:void(0)">4</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="javascript:void(0)">5</a>
+                </li>
+                <li class="page-item next">
+                  <a class="page-link" href="javascript:void(0)"><i class="fas fa-angle-right"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- /pagination -->
+
+        </div>
+        <div class="col-lg-3 theiaStickySidebar">
+          <div class="stickybar">
+            <div class="filter-clear">
+              <div class="clear-filter d-flex align-items-center">
+                <h4><i class="feather icon-filter"></i>Filters</h4>
+                <div class="clear-text">
+                  <p>CLEAR</p>
+                </div>
+              </div>
+
+              <!-- Search Filter -->
+              <div class="card search-filter categories-filter-blk">
+                <div class="card-body">
+                  <div class="filter-widget mb-0">
+                    <div class="categories-head d-flex align-items-center">
+                      <h4>Course categories</h4>
+                      <i class="fas fa-angle-down"></i>
+                    </div>
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input input-box" type="checkbox" name="select_specialist" />
+                        Backend (3)
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input input-box" type="checkbox" name="select_specialist" />
+                        CSS (2)
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input input-box" type="checkbox" name="select_specialist" />
+                        Frontend (2)
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input input-box" type="checkbox" name="select_specialist" />
+                        General (2)
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input input-box" type="checkbox" name="select_specialist" />
+                        IT & Software (2)
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input input-box" type="checkbox" name="select_specialist" />
+                        Photography (2)
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input input-box" type="checkbox" name="select_specialist" />
+                        Programming Language (3)
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input input-box" type="checkbox" name="select_specialist" />
+                        Technology (2)
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /Search Filter -->
+
+              <!-- Search Filter -->
+              <div class="card search-filter">
+                <div class="card-body">
+                  <div class="filter-widget mb-0">
+                    <div class="categories-head d-flex align-items-center">
+                      <h4>Instructors</h4>
+                      <i class="fas fa-angle-down"></i>
+                    </div>
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input input-box" type="checkbox" name="select_specialist" />
+                        Keny White (10)
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input input-box" type="checkbox" name="select_specialist" />
+                        Hinata Hyuga (5)
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input input-box" type="checkbox" name="select_specialist" />
+                        John Doe (3)
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input input-box" type="checkbox" name="select_specialist" />
+                        Nicole Brown
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /Search Filter -->
+
+              <!-- Search Filter -->
+              <div class="card search-filter ">
+                <div class="card-body">
+                  <div class="filter-widget mb-0">
+                    <div class="categories-head d-flex align-items-center">
+                      <h4>Price</h4>
+                      <i class="fas fa-angle-down"></i>
+                    </div>
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input radio-box" type="checkbox" name="select_specialist" />
+                        All (18)
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input radio-box" type="checkbox" name="select_specialist" />
+                        Free (3)
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input radio-box" type="checkbox" name="select_specialist" />
+                        Paid (15)
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /Search Filter -->
+
+              <!-- Latest Posts -->
+              <div class="card post-widget ">
+                <div class="card-body">
+                  <div class="latest-head">
+                    <h4 class="card-title">Latest Courses</h4>
+                  </div>
+                  <ul class="latest-posts">
+                    @for (data of latestCourses; track data) {
+                      <li>
+                        <div class="post-thumb">
+                          <a [routerLink]="routes.page_course_details">
+                            <img class="img-fluid" [src]="data.img" alt="">
+                          </a>
+                        </div>
+                        <div class="post-info" [ngClass]="{'free-color': data.content2 === 'FREE' }"  >
+                          <h4>
+                            <a [routerLink]="routes.page_course_details">{{data.content1}}</a>
+                          </h4>
+                          <p>{{data.content2}}</p>
+                        </div>
+                      </li>
+                    }
+                  </ul>
+                </div>
+              </div>
+              <!-- /Latest Posts -->
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /Course -->

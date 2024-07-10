@@ -1,0 +1,26 @@
+{
+    "data": [
+        {
+            "date": "March 12, 2024",
+            "time":"05:40 PM",
+            "announcements": "\n                                                    Course: Introduction to Programming- \n                                                        Python & Java"
+        },
+        {
+            "date": "March 17, 2024 ",
+            "time":"10:00 AM",
+            "announcements": "Essay Assignment Due Date Approaching\n                                                    Course: Sketch from A to Z (2024): Become an app designer"
+        },
+        {
+            "date": "April 10, 2024",
+            "time":"12:30 PM",
+            "announcements": "Final Exam Schedule and Preparation Tips\n                                                    Course: Learn Angular Fundamentals Beginners Guide"
+        },
+        {
+            "date": "April 24, 2024 ",
+            "time":"02:20 PM",
+            "announcements": "New Video Lectures Added\n                                                    Course: Learn JavaScript and Express to become a Expert"
+        }
+    ],
+    "totalData": 6
+  }
+  
